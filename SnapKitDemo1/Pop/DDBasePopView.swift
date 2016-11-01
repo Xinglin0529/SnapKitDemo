@@ -32,8 +32,8 @@ class DDBasePopView: UIView {
     var attachedView: UIView?
     
     var type: DDPopupType {
-        didSet {
-            switch oldValue {
+        willSet {
+            switch newValue {
             case .Alert:
                 self.showAnimation = alertShowAnimation()
                 self.hideAnimation = alertHideAnimation()
@@ -48,8 +48,8 @@ class DDBasePopView: UIView {
     }
     
     var animationDuration: TimeInterval {
-        didSet {
-            self.attachedView?.dd_dimAnimationDuration = oldValue
+        willSet {
+            self.attachedView?.dd_dimAnimationDuration = newValue
         }
     }
     
@@ -62,7 +62,7 @@ class DDBasePopView: UIView {
     
     override init(frame: CGRect) {
         self.animationDuration = 0.3
-        self.type = .Sheet
+        self.type = .Alert
         
         super.init(frame: frame)
         
@@ -74,7 +74,6 @@ class DDBasePopView: UIView {
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
     
     func hideKeyboard() {
         for window in UIApplication.shared.windows {

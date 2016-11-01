@@ -76,10 +76,7 @@ class ViewController: UIViewController {
 //        if UIApplication.shared.canOpenURL(url as! URL) {
 //            UIApplication.shared.open(url as! URL, options: ["key": "value"], completionHandler: nil)
 //        }
-        let cus = CustomAlert()
-        cus.snp.makeConstraints { (make) in
-            make.size.equalTo(CGSize(width: 300, height: 200))
-        }
+        let cus = CustomAlert(frame: CGRect(x: 0, y: 0, width: 300, height: 200))
         DDPopManager.showCenterAlert(withCustomView: cus)
     }
     

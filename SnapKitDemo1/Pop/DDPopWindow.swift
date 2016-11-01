@@ -47,6 +47,7 @@ class DDPopWindow: UIWindow {
     }
     
     func cacheWindow() {
+        self.backgroundColor = .clear
         self.makeKeyAndVisible()
         UIApplication.shared.delegate?.window??.makeKey()
         self.isHidden = true

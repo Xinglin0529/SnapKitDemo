@@ -8,16 +8,18 @@
 
 import UIKit
 
-class CustomAlert: UIView {
+class CustomAlert: DDBasePopView {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
+        self.backgroundColor = .white
         
         let text = UILabel()
-        text.text = "测试测试时测试"
+        text.text = "测试测试时测试测试测试时测试测试测试时测试测试测试时测试测试测试时测试测试测试时测试测试测试时测试"
         text.font = UIFont.systemFont(ofSize: 16)
         text.textAlignment = .left
-        text.textColor = .black
+        text.textColor = .red
+        text.numberOfLines = 0
         self.addSubview(text)
         
         text.snp.makeConstraints { (make) in

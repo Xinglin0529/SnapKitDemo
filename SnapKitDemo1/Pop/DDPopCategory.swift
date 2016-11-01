@@ -31,7 +31,7 @@ extension UIImage {
         context?.fill(rect)
         let image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
-        return image!
+        return image!.dd_streched()
     }
     
     public func dd_streched() -> UIImage {
@@ -68,14 +68,13 @@ fileprivate var dd_dimAnimationDurationKey = "dd_dimAnimationDurationKey"
 fileprivate var dd_dimBackgroundAnimatingKey = "dd_dimBackgroundAnimatingKey"
 
 extension UIView {
-    var dd_dimRefrenceCount: NSInteger {
+    var dd_dimRefrenceCount: NSInteger? {
         set {
             objc_setAssociatedObject(self, &dd_dimReferenceCountKey, newValue, .OBJC_ASSOCIATION_ASSIGN)
         }
         
         get {
-            //return objc_getAssociatedObject(self, &dd_dimReferenceCountKey) as! NSInteger
-            return 1
+            return objc_getAssociatedObject(self, &dd_dimReferenceCountKey) as? NSInteger
         }
     }
 }
@@ -106,9 +105,9 @@ extension UIView {
         }
     }
     
-    var dd_dimAnimationDuration: TimeInterval {
+    var dd_dimAnimationDuration: TimeInterval? {
         get {
-            //return objc_getAssociatedObject(self, &dd_dimAnimationDurationKey) as! TimeInterval
+//            return objc_getAssociatedObject(self, &dd_dimAnimationDurationKey) as? TimeInterval
             return 0.3
         }
         set {
@@ -117,10 +116,12 @@ extension UIView {
     }
     
     public func dd_showDimBackground() {
-        self.dd_dimRefrenceCount += 1
+        self.dd_dimRefrenceCount? += 1
         
-        if self.dd_dimRefrenceCount > 1 {
-            return
+        if let dimRefrenceCount = self.dd_dimRefrenceCount {
+            if dimRefrenceCount > 1 {
+                return
+            }
         }
         
         self.dd_dimBackgroundView.isHidden = false
@@ -132,7 +133,7 @@ extension UIView {
             self.bringSubview(toFront: self.dd_dimBackgroundView)
         }
         
-        UIView.animate(withDuration: self.dd_dimAnimationDuration, delay: 0, options: [.curveLinear, .beginFromCurrentState], animations: {[unowned self] in
+        UIView.animate(withDuration: self.dd_dimAnimationDuration!, delay: 0, options: [.curveLinear, .beginFromCurrentState], animations: {[unowned self] in
                 self.dd_dimBackgroundView.backgroundColor = UIColor.dd_color(withHex: 0x0000007f)
             }) { [unowned self](finished) in
                 if finished {
@@ -142,14 +143,16 @@ extension UIView {
     }
     
     public func dd_hideDimBackground(animated: Bool) {
-        self.dd_dimRefrenceCount -= 1
-        if self.dd_dimRefrenceCount > 0 {
-            return
+        self.dd_dimRefrenceCount? -= 1
+        if let dimRefrenceCount = self.dd_dimRefrenceCount {
+            if dimRefrenceCount > 0 {
+                return
+            }
         }
         
         if animated {
             self.dd_dimBackgroundAnimating = true
-            UIView.animate(withDuration: self.dd_dimAnimationDuration, delay: 0, options: [.curveLinear, .beginFromCurrentState], animations: { [unowned self] in
+            UIView.animate(withDuration: self.dd_dimAnimationDuration!, delay: 0, options: [.curveLinear, .beginFromCurrentState], animations: { [unowned self] in
                     self.dd_dimBackgroundView.backgroundColor = UIColor.dd_color(withHex: 0x00000000)
                 }, completion: { [unowned self](finished) in
                     if finished {
