@@ -63,6 +63,7 @@ class ViewController: UIViewController {
         }
     }
     
+    
     func swap<T>(_ a: inout T, _ b: inout T) {
         let temp = a
         a = b
@@ -70,11 +71,16 @@ class ViewController: UIViewController {
     }
     
     func touchButton(sender: UIButton) {
-        self.navigationController?.pushViewController(NextViewController(), animated: true)
+        //self.navigationController?.pushViewController(NextViewController(), animated: true)
 //        let url = NSURL(string: "appApplication://")
 //        if UIApplication.shared.canOpenURL(url as! URL) {
 //            UIApplication.shared.open(url as! URL, options: ["key": "value"], completionHandler: nil)
 //        }
+        let cus = CustomAlert()
+        cus.snp.makeConstraints { (make) in
+            make.size.equalTo(CGSize(width: 300, height: 200))
+        }
+        DDPopManager.showCenterAlert(withCustomView: cus)
     }
     
     override func didReceiveMemoryWarning() {

@@ -8,4 +8,5 @@ pod 'Alamofire'
 pod 'SwiftyJSON'
 pod 'RxSwift'
 pod 'RxCocoa'
+pod 'HandyJSON'
 end
