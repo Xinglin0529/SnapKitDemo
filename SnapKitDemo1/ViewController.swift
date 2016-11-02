@@ -61,8 +61,76 @@ class ViewController: UIViewController {
             make.center.equalTo(viewBottom.snp.center)
             make.size.equalTo(CGSize(width: 200, height: 60))
         }
+        
+        gcdTest()
     }
     
+    
+    func gcdTest() {
+        print("current queue \(Thread.current), isMainThread \(Thread.isMainThread)")
+        
+        let time = DispatchTime.now() + 2
+        
+        DispatchQueue.main.asyncAfter(deadline: time) { 
+            print("2秒之后调用")
+        }
+        
+        let wallTime = DispatchWallTime.now() + 3
+        
+        DispatchQueue.main.asyncAfter(wallDeadline: wallTime) { 
+            print("3秒之后调用")
+        }
+        
+        let queue = DispatchQueue(label: "queue1")
+        queue.async {
+            print("queue1")
+        }
+        
+        queue.sync {
+            print("sync queue")
+        }
+        
+        DispatchQueue.global().async {
+            DispatchQueue.main.async {
+                print("inner main queue")
+            }
+            
+            print("global queue")
+        }
+        
+//        DispatchQueue.main.sync {
+//            print("同步执行")
+//        }
+        
+        let queue2 = DispatchQueue(label: "queue2", attributes: .concurrent, target: nil)
+        queue2.async {
+            print("queue2 并行")
+        }
+        
+        let group = DispatchGroup()
+        let queue3 = DispatchQueue(label: "queue3")
+        
+        group.enter()
+        DispatchQueue.main.async {
+            print("main queue")
+            group.leave()
+
+        }
+        queue3.async(group: group, execute: {
+
+        })
+        
+        group.notify(queue: DispatchQueue.main) { 
+            print("group task complete")
+        }
+        
+        let queue5 = DispatchQueue(label: "workItem1")
+        let workItem1 = DispatchWorkItem(qos: .userInitiated, flags: DispatchWorkItemFlags.assignCurrentContext, block: {
+            print("workItem1 worked")
+        })
+        queue5.async(execute: workItem1)
+        
+    }
     
     func swap<T>(_ a: inout T, _ b: inout T) {
         let temp = a
@@ -77,6 +145,10 @@ class ViewController: UIViewController {
 //            UIApplication.shared.open(url as! URL, options: ["key": "value"], completionHandler: nil)
 //        }
         let cus = CustomAlert(frame: CGRect(x: 0, y: 0, width: 300, height: 200))
+        cus.delegate = self
+        cus.closeAction = {
+            print("++++++++++++++++++++++++++++++")
+        }
         DDPopManager.showCenterAlert(withCustomView: cus)
     }
     
@@ -84,7 +156,11 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+}
 
-
+extension ViewController: CustomAlertDelegate {
+    func closeButtonAction() {
+        print("-----------------------------")
+    }
 }
 

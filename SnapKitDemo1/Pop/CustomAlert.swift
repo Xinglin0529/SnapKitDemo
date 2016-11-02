@@ -8,8 +8,15 @@
 
 import UIKit
 
-class CustomAlert: DDBasePopView {
+@objc protocol CustomAlertDelegate: NSObjectProtocol {
+    @objc optional func closeButtonAction()
+}
 
+class CustomAlert: DDBasePopView {
+    
+    weak var delegate: CustomAlertDelegate?
+    var closeAction: (() -> ())?
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.backgroundColor = .white
@@ -44,6 +51,12 @@ class CustomAlert: DDBasePopView {
     
     func closeAlert() {
         DDPopManager.hideAllPopView()
+        if self.delegate != nil {
+            self.delegate?.closeButtonAction!()
+        }
+        if self.closeAction != nil {
+            self.closeAction!()
+        }
     }
     
     required init?(coder aDecoder: NSCoder) {
