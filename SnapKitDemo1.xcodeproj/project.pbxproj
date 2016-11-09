@@ -19,6 +19,7 @@
 		AA6E642F1DC7210300137DD8 /* DDBasePopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6E642E1DC7210300137DD8 /* DDBasePopView.swift */; };
 		AA6E64311DC74E8800137DD8 /* DDPopManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6E64301DC74E8800137DD8 /* DDPopManager.swift */; };
 		AA6E64331DC750E900137DD8 /* CustomAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6E64321DC750E900137DD8 /* CustomAlert.swift */; };
+		AAF47E6B1DD04F8800F1BB7D /* File.md in Sources */ = {isa = PBXBuildFile; fileRef = AAF47E6A1DD04F8800F1BB7D /* File.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		AA6E642E1DC7210300137DD8 /* DDBasePopView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDBasePopView.swift; sourceTree = "<group>"; };
 		AA6E64301DC74E8800137DD8 /* DDPopManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDPopManager.swift; sourceTree = "<group>"; };
 		AA6E64321DC750E900137DD8 /* CustomAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomAlert.swift; sourceTree = "<group>"; };
+		AAF47E6A1DD04F8800F1BB7D /* File.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = File.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +120,7 @@
 				AA6E642E1DC7210300137DD8 /* DDBasePopView.swift */,
 				AA6E64301DC74E8800137DD8 /* DDPopManager.swift */,
 				AA6E64321DC750E900137DD8 /* CustomAlert.swift */,
+				AAF47E6A1DD04F8800F1BB7D /* File.md */,
 			);
 			path = Pop;
 			sourceTree = "<group>";
@@ -246,6 +249,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAF47E6B1DD04F8800F1BB7D /* File.md in Sources */,
 				AA6681941DBDEE9300D496E9 /* ViewController.swift in Sources */,
 				AA6E642D1DC71B5D00137DD8 /* DDPopWindow.swift in Sources */,
 				AA6681A41DBDF9C700D496E9 /* NextViewController.swift in Sources */,

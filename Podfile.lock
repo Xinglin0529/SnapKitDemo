@@ -1,6 +1,5 @@
 PODS:
   - Alamofire (4.0.1)
-  - HandyJSON (1.1.0)
   - RxCocoa (3.0.0):
     - RxSwift (~> 3.0)
   - RxSwift (3.0.0)
@@ -9,7 +8,6 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
-  - HandyJSON
   - RxCocoa
   - RxSwift
   - SnapKit (~> 3.0.2)
@@ -17,12 +15,11 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   Alamofire: 7682d43245de14874acd142ec137b144aa1dd335
-  HandyJSON: c19dba750f1a8c238c4f47f40b1b5e3efaef7e34
   RxCocoa: 0a2f3ae381cf16f4021a4cee7a4420f83058a965
   RxSwift: a930cd662f5b4a7ca9dc3518585dba91dadf497c
   SnapKit: 2e456761aa92d4d4067a7a5594c18769d451a8ad
   SwiftyJSON: f0be2e604f83e8405a624e9f891898bf6ed4e019
 
-PODFILE CHECKSUM: 982d320b69da92780fbabf1f5a68096932c88bd5
+PODFILE CHECKSUM: fc2e76fb469195a8983ccbd602c56b41181d268a
 
 COCOAPODS: 1.1.1

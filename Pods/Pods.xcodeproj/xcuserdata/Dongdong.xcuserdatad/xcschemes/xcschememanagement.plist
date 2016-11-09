@@ -9,11 +9,6 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>HandyJSON.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>Pods-SnapKitDemo1.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -42,37 +37,32 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>55EFC3990C67FBBB190B410367CFC52B</key>
+		<key>0B2BB707E3D01A0B015E1DEEF77A92D7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>2BC95A5AD92C08FCF07F8AF3BF0B082B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>48AE27048CCB13A2C023AF5743E7881F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>5260AF6BC6577B87FA4EE77480B673EF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>674EA04414F0264EC34043F67B37DC22</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>79C040AFDDCE1BCBF6D8B5EB0B85887F</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>A21FB8E993B0C98F74D2140B7EB0E84F</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>A4EE973C676A1DFA50CB228BECB48AC8</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>DE3F1B8ECF90FDCE852C052C6F02BE68</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>E706E1289ADF8EA6140EEE788A9E36C1</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>FA2434B8E441FAF91C7E273E7001D119</key>
 		<dict>
 			<key>primary</key>
 			<true/>
