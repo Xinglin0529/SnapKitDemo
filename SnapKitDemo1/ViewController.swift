@@ -63,6 +63,19 @@ class ViewController: UIViewController {
             make.size.equalTo(CGSize(width: 200, height: 60))
         }
         
+        let v1 = Init(UIView()) {
+            $0.backgroundColor = UIColor.black
+        }
+        
+        viewBottom.addSubview(v1)
+        
+        v1.snp.makeConstraints {
+            $0.leading.equalTo(15)
+            $0.trailing.equalTo(-15)
+            $0.height.equalTo(60)
+            $0.top.equalTo(10)
+        }
+        
         gcdTest()
     }
     
