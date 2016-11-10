@@ -3,7 +3,7 @@ platform:ios,'10.0'
 use_frameworks!
 
 target 'SnapKitDemo1' do
-pod 'SnapKit','~>3.0.2'
+pod 'SnapKit'
 pod 'Alamofire'
 pod 'SwiftyJSON'
 pod 'RxSwift'

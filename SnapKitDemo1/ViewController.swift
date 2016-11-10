@@ -19,6 +19,7 @@ class ViewController: UIViewController {
         
         let view = UIView()
         view.backgroundColor = .red
+
         self.view.addSubview(view)
         view.snp.makeConstraints { make in
             make.leading.equalTo(15)
