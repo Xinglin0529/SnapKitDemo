@@ -18,7 +18,7 @@ enum DDPopupType {
 
 typealias DDPopupClosure = (DDBasePopView) -> ()
 
-class DDBasePopView: UIView {
+open class DDBasePopView: UIView {
     
     var visible: Bool {
         if self.attachedView != nil {
