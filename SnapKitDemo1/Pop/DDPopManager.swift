@@ -19,7 +19,7 @@ class DDPopManager: NSObject {
     }
     
     class func hideAllPopView() {
-        NotificationCenter.default.post(name: NSNotification.Name(rawValue: PopViewHideNotification), object: nil, userInfo: nil)
+        NotificationCenter.default.post(name: NSNotification.Name.PopViewAction.hide, object: nil, userInfo: nil)
     }
     
     @discardableResult

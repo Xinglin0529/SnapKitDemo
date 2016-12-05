@@ -107,11 +107,10 @@ extension UIView {
     
     var dd_dimAnimationDuration: TimeInterval? {
         get {
-//            return objc_getAssociatedObject(self, &dd_dimAnimationDurationKey) as? TimeInterval
-            return 0.3
+            return objc_getAssociatedObject(self, &dd_dimAnimationDurationKey) as? TimeInterval
         }
         set {
-            objc_setAssociatedObject(self, &dd_dimAnimationDurationKey, newValue, .OBJC_ASSOCIATION_ASSIGN)
+            objc_setAssociatedObject(self, &dd_dimAnimationDurationKey, newValue, .OBJC_ASSOCIATION_COPY)
         }
     }
     

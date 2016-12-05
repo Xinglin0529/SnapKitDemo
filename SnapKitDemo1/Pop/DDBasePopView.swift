@@ -8,7 +8,11 @@
 
 import UIKit
 
-public let PopViewHideNotification: String = "PopViewHideNotification"
+extension Notification.Name {
+    public struct PopViewAction {
+        static let hide = Notification.Name(rawValue: "PopViewHideNotification")
+    }
+}
 
 enum DDPopupType {
     case Alert
@@ -71,7 +75,7 @@ open class DDBasePopView: UIView {
         addGestureRecognizer(tap)
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
@@ -88,7 +92,7 @@ open class DDBasePopView: UIView {
     }
     
     func show(with block: DDPopupClosure?) {
-        NotificationCenter.default.addObserver(self, selector: #selector(DDBasePopView.hideImmediately(sender:)), name: NSNotification.Name(rawValue: PopViewHideNotification), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(DDBasePopView.hideImmediately(sender:)), name: NSNotification.Name.PopViewAction.hide, object: nil)
         if block != nil {
             self.showCompletionBlock = block
         }
@@ -106,6 +110,7 @@ open class DDBasePopView: UIView {
     }
     
     func cancel() {
+        self.isAllHide = true
         hide()
     }
     
@@ -118,7 +123,7 @@ open class DDBasePopView: UIView {
             return
         }
         
-        NotificationCenter.default.removeObserver(self, name: NSNotification.Name(rawValue: PopViewHideNotification), object: nil)
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.PopViewAction.hide, object: nil)
         
         if block != nil {
             self.hideCompletionBlock = block
@@ -128,7 +133,7 @@ open class DDBasePopView: UIView {
             self.attachedView = DDPopWindow.shared as UIView
         }
         
-        self.attachedView?.dd_hideDimBackground(animated: !self.isAllHide)
+        self.attachedView?.dd_hideDimBackground(animated: self.isAllHide)
         self.isAllHide = false
         
         if self.withKeyboard {
