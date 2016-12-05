@@ -68,7 +68,7 @@ fileprivate var dd_dimAnimationDurationKey = "dd_dimAnimationDurationKey"
 fileprivate var dd_dimBackgroundAnimatingKey = "dd_dimBackgroundAnimatingKey"
 
 extension UIView {
-    var dd_dimRefrenceCount: NSInteger? {
+    fileprivate var dd_dimRefrenceCount: NSInteger? {
         set {
             objc_setAssociatedObject(self, &dd_dimReferenceCountKey, newValue, .OBJC_ASSOCIATION_ASSIGN)
         }
@@ -80,7 +80,7 @@ extension UIView {
 }
 
 extension UIView {
-    var dd_dimBackgroundView: UIView {
+    public var dd_dimBackgroundView: UIView {
         var dd_dimView = objc_getAssociatedObject(self, &dd_dimBackgroundViewKey) as? UIView
         if dd_dimView == nil {
             dd_dimView = UIView()
@@ -105,7 +105,7 @@ extension UIView {
         }
     }
     
-    var dd_dimAnimationDuration: TimeInterval? {
+    public var dd_dimAnimationDuration: TimeInterval? {
         get {
             return objc_getAssociatedObject(self, &dd_dimAnimationDurationKey) as? TimeInterval
         }

@@ -10,9 +10,9 @@ import UIKit
 
 class DDPopWindow: UIWindow {
     
-    var touchWildToHide: Bool = false
+    public var touchWildToHide: Bool = false
     
-    static let shared = DDPopWindow()
+    public static let shared = DDPopWindow()
     
     private var keyboardRect: CGRect?
     
@@ -30,12 +30,12 @@ class DDPopWindow: UIWindow {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func keyboardFrameDidChanged(sender: Notification) {
+    @objc private func keyboardFrameDidChanged(sender: Notification) {
         let keyboardBoundsValue: NSValue = sender.userInfo?[UIKeyboardFrameEndUserInfoKey] as! NSValue
         self.keyboardRect = keyboardBoundsValue.cgRectValue
     }
     
-    func tapAction(tap: UITapGestureRecognizer) {
+    @objc private func tapAction(tap: UITapGestureRecognizer) {
         if self.touchWildToHide && !self.dd_dimBackgroundAnimating {
             
             for v in self.dd_dimBackgroundView.subviews {
@@ -46,7 +46,7 @@ class DDPopWindow: UIWindow {
         }
     }
     
-    func cacheWindow() {
+    public func cacheWindow() {
         self.backgroundColor = .clear
         self.makeKeyAndVisible()
         UIApplication.shared.delegate?.window??.makeKey()
