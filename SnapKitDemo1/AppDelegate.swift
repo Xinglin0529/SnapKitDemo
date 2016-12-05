@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import HelloWorld
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -20,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window?.backgroundColor = .white
         self.window?.rootViewController = UINavigationController(rootViewController: ViewController())
         self.window?.makeKeyAndVisible()
-        
+        Hello.sayHello()
         return true
     }
 

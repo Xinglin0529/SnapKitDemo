@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		92D0B41DC5209E93CB3D25C1 /* Pods_SnapKitDemo1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BACD6BEC5A32F4A8BC62B94 /* Pods_SnapKitDemo1.framework */; };
+		A27A4EFF1DF412E00065C69F /* HelloWorld.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A27A4EFE1DF412E00065C69F /* HelloWorld.framework */; };
+		A27A4F001DF412E60065C69F /* HelloWorld.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = A27A4EFE1DF412E00065C69F /* HelloWorld.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		AA6681921DBDEE9300D496E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6681911DBDEE9300D496E9 /* AppDelegate.swift */; };
 		AA6681941DBDEE9300D496E9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6681931DBDEE9300D496E9 /* ViewController.swift */; };
 		AA6681971DBDEE9300D496E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA6681951DBDEE9300D496E9 /* Main.storyboard */; };
@@ -20,12 +22,25 @@
 		AA6E64311DC74E8800137DD8 /* DDPopManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6E64301DC74E8800137DD8 /* DDPopManager.swift */; };
 		AA6E64331DC750E900137DD8 /* CustomAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6E64321DC750E900137DD8 /* CustomAlert.swift */; };
 		AAC3CA3D1DD4107100000E9B /* CustomPrefix.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC3CA3C1DD4107100000E9B /* CustomPrefix.swift */; };
-		AAF47E6B1DD04F8800F1BB7D /* File.md in Sources */ = {isa = PBXBuildFile; fileRef = AAF47E6A1DD04F8800F1BB7D /* File.md */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A27A4EC01DF3D8110065C69F /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				A27A4F001DF412E60065C69F /* HelloWorld.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		1BACD6BEC5A32F4A8BC62B94 /* Pods_SnapKitDemo1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SnapKitDemo1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CD21BD17FD2074DC497641F /* Pods-SnapKitDemo1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnapKitDemo1.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SnapKitDemo1/Pods-SnapKitDemo1.debug.xcconfig"; sourceTree = "<group>"; };
+		A27A4EFE1DF412E00065C69F /* HelloWorld.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = HelloWorld.framework; sourceTree = "<group>"; };
 		A3568BC331816293BA9B294E /* Pods-SnapKitDemo1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnapKitDemo1.release.xcconfig"; path = "Pods/Target Support Files/Pods-SnapKitDemo1/Pods-SnapKitDemo1.release.xcconfig"; sourceTree = "<group>"; };
 		AA66818E1DBDEE9300D496E9 /* SnapKitDemo1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SnapKitDemo1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA6681911DBDEE9300D496E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -41,7 +56,6 @@
 		AA6E64301DC74E8800137DD8 /* DDPopManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDPopManager.swift; sourceTree = "<group>"; };
 		AA6E64321DC750E900137DD8 /* CustomAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomAlert.swift; sourceTree = "<group>"; };
 		AAC3CA3C1DD4107100000E9B /* CustomPrefix.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomPrefix.swift; sourceTree = "<group>"; };
-		AAF47E6A1DD04F8800F1BB7D /* File.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = File.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A27A4EFF1DF412E00065C69F /* HelloWorld.framework in Frameworks */,
 				92D0B41DC5209E93CB3D25C1 /* Pods_SnapKitDemo1.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -102,6 +117,7 @@
 		AA6681901DBDEE9300D496E9 /* SnapKitDemo1 */ = {
 			isa = PBXGroup;
 			children = (
+				A27A4EFE1DF412E00065C69F /* HelloWorld.framework */,
 				AA6E64291DC6ECF200137DD8 /* Pop */,
 				AA083B3A1DC3385C0018D82F /* Menu */,
 				AA6681911DBDEE9300D496E9 /* AppDelegate.swift */,
@@ -123,7 +139,6 @@
 				AA6E642E1DC7210300137DD8 /* DDBasePopView.swift */,
 				AA6E64301DC74E8800137DD8 /* DDPopManager.swift */,
 				AA6E64321DC750E900137DD8 /* CustomAlert.swift */,
-				AAF47E6A1DD04F8800F1BB7D /* File.md */,
 			);
 			path = Pop;
 			sourceTree = "<group>";
@@ -141,6 +156,7 @@
 				AA66818C1DBDEE9300D496E9 /* Resources */,
 				F97A959BC7A33711ED49D879 /* [CP] Embed Pods Frameworks */,
 				E4C9D859A75C26663D8869DD /* [CP] Copy Pods Resources */,
+				A27A4EC01DF3D8110065C69F /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -252,7 +268,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AAF47E6B1DD04F8800F1BB7D /* File.md in Sources */,
 				AA6681941DBDEE9300D496E9 /* ViewController.swift in Sources */,
 				AA6E642D1DC71B5D00137DD8 /* DDPopWindow.swift in Sources */,
 				AA6681A41DBDF9C700D496E9 /* NextViewController.swift in Sources */,
@@ -384,6 +399,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = KJJM44RE5C;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SnapKitDemo1",
+				);
+				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = SnapKitDemo1/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Pingan.SnapKitDemo1;
@@ -398,6 +418,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = KJJM44RE5C;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SnapKitDemo1",
+				);
+				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = SnapKitDemo1/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Pingan.SnapKitDemo1;
