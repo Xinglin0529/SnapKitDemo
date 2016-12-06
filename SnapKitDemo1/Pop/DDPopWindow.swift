@@ -30,12 +30,12 @@ class DDPopWindow: UIWindow {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func keyboardFrameDidChanged(sender: Notification) {
+    @objc private func keyboardFrameDidChanged(sender: Notification) {
         let keyboardBoundsValue: NSValue = sender.userInfo?[UIKeyboardFrameEndUserInfoKey] as! NSValue
         self.keyboardRect = keyboardBoundsValue.cgRectValue
     }
     
-    func tapAction(tap: UITapGestureRecognizer) {
+    @objc private func tapAction(tap: UITapGestureRecognizer) {
         if self.touchWildToHide && !self.dd_dimBackgroundAnimating {
             
             for v in self.dd_dimBackgroundView.subviews {
