@@ -10,9 +10,9 @@ import UIKit
 
 class DDPopWindow: UIWindow {
     
-    var touchWildToHide: Bool = false
+    internal var touchWildToHide: Bool = false
     
-    static let shared = DDPopWindow()
+    internal static let shared = DDPopWindow()
     
     private var keyboardRect: CGRect?
     
@@ -46,7 +46,7 @@ class DDPopWindow: UIWindow {
         }
     }
     
-    func cacheWindow() {
+    internal func cacheWindow() {
         self.backgroundColor = .clear
         self.makeKeyAndVisible()
         UIApplication.shared.delegate?.window??.makeKey()
