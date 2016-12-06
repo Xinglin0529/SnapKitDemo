@@ -14,28 +14,28 @@ extension Notification.Name {
     }
 }
 
-enum DDPopupType {
+public enum DDPopupType {
     case Alert
     case Sheet
     case Custom
 }
 
-typealias DDPopupClosure = (DDBasePopView) -> ()
+public typealias DDPopupClosure = (DDBasePopView) -> ()
 
 open class DDBasePopView: UIView {
     
-    var visible: Bool {
+    fileprivate var visible: Bool {
         if self.attachedView != nil {
             return !self.attachedView!.dd_dimBackgroundView.isHidden
         }
         return false
     }
     
-    var isAllHide: Bool = false
+    fileprivate var isAllHide: Bool = false
     
-    var attachedView: UIView?
+    fileprivate var attachedView: UIView?
     
-    var type: DDPopupType {
+    public var type: DDPopupType {
         willSet {
             switch newValue {
             case .Alert:
@@ -51,18 +51,18 @@ open class DDBasePopView: UIView {
         }
     }
     
-    var animationDuration: TimeInterval {
+    public var animationDuration: TimeInterval {
         willSet {
             self.attachedView?.dd_dimAnimationDuration = newValue
         }
     }
     
-    var withKeyboard: Bool = false
+    fileprivate var withKeyboard: Bool = false
     
-    var showCompletionBlock: DDPopupClosure?
-    var hideCompletionBlock: DDPopupClosure?
-    var showAnimation: DDPopupClosure?
-    var hideAnimation: DDPopupClosure?
+    fileprivate var showCompletionBlock: DDPopupClosure?
+    fileprivate var hideCompletionBlock: DDPopupClosure?
+    fileprivate var showAnimation: DDPopupClosure?
+    fileprivate var hideAnimation: DDPopupClosure?
     
     override init(frame: CGRect) {
         self.animationDuration = 0.3
@@ -79,7 +79,7 @@ open class DDBasePopView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func hideKeyboard() {
+    private func hideKeyboard() {
         for window in UIApplication.shared.windows {
             for v in window.subviews {
                 self.dismissAllKeyboardInView(view: v)
@@ -87,11 +87,11 @@ open class DDBasePopView: UIView {
         }
     }
     
-    func show() {
+    public func show() {
         show(with: nil)
     }
     
-    func show(with block: DDPopupClosure?) {
+    public func show(with block: DDPopupClosure?) {
         NotificationCenter.default.addObserver(self, selector: #selector(DDBasePopView.hideImmediately(sender:)), name: NSNotification.Name.PopViewAction.hide, object: nil)
         if block != nil {
             self.showCompletionBlock = block
@@ -109,16 +109,16 @@ open class DDBasePopView: UIView {
         }
     }
     
-    func cancel() {
+    public func cancel() {
         self.isAllHide = true
         hide()
     }
     
-    func hide() {
+    public func hide() {
         hide(with: nil)
     }
     
-    func hide(with block: DDPopupClosure?) {
+    public func hide(with block: DDPopupClosure?) {
         if !self.visible {
             return
         }
@@ -142,14 +142,14 @@ open class DDBasePopView: UIView {
         self.hideAnimation!(self)
     }
     
-    func hideImmediately(sender: Notification) {
+    @objc private func hideImmediately(sender: Notification) {
         self.isAllHide = true
         hide(with: nil)
     }
     
     ///Animation Block
     
-    func alertShowAnimation() -> DDPopupClosure {
+    private func alertShowAnimation() -> DDPopupClosure {
         let popClosure: DDPopupClosure = { [unowned self] (popView) in
             self.attachedView?.dd_dimBackgroundView.addSubview(self)
             self.snp.updateConstraints({ (make) in
@@ -169,7 +169,7 @@ open class DDBasePopView: UIView {
         return popClosure
     }
     
-    func alertHideAnimation() -> DDPopupClosure {
+    private func alertHideAnimation() -> DDPopupClosure {
         let hideBlock: DDPopupClosure = { [unowned self] (popView) in
             self.attachedView?.layoutIfNeeded()
             UIView.animate(withDuration: 0.25, delay: 0, options: .allowAnimatedContent, animations: { 
@@ -185,23 +185,23 @@ open class DDBasePopView: UIView {
         return hideBlock
     }
     
-    func customShowAnimation() -> DDPopupClosure {
+    private func customShowAnimation() -> DDPopupClosure {
         return commonShowAnimation()
     }
     
-    func customHideAnimation() -> DDPopupClosure {
+    private func customHideAnimation() -> DDPopupClosure {
         return commonHideAnimation()
     }
     
-    func sheetShowAnimation() -> DDPopupClosure {
+    private func sheetShowAnimation() -> DDPopupClosure {
         return commonShowAnimation()
     }
     
-    func sheetHideAnimation() -> DDPopupClosure {
+    private func sheetHideAnimation() -> DDPopupClosure {
         return commonHideAnimation()
     }
     
-    func commonShowAnimation() -> DDPopupClosure {
+    private func commonShowAnimation() -> DDPopupClosure {
         let showBlock: DDPopupClosure = { [unowned self] (popView) in
             self.attachedView?.dd_dimBackgroundView.addSubview(self)
             self.attachedView?.layoutIfNeeded()
@@ -249,7 +249,7 @@ open class DDBasePopView: UIView {
         return showBlock
     }
     
-    func commonHideAnimation() -> DDPopupClosure {
+    private func commonHideAnimation() -> DDPopupClosure {
         let hideBlock: DDPopupClosure = { [unowned self] (popView) in
             self.attachedView?.layoutIfNeeded()
             UIView.animate(withDuration: 0.25, delay: 0, options: .allowAnimatedContent, animations: { 
@@ -268,22 +268,22 @@ open class DDBasePopView: UIView {
         return hideBlock
     }
     
-    func keyboardHeight() -> CGFloat {
+    private func keyboardHeight() -> CGFloat {
         return 216.0
     }
     
     ///Override by subClass
-    func tapAction(tap: UITapGestureRecognizer) {
+    open func tapAction(tap: UITapGestureRecognizer) {
         
     }
     
     ///Override by subClass
-    func showKeyboard() {
+    open func showKeyboard() {
         
     }
 
     ///Override by subClass
-    func showCompletionHandler() {
+    open func showCompletionHandler() {
         
     }
     

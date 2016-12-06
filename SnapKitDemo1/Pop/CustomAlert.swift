@@ -30,8 +30,8 @@ class CustomAlert: DDBasePopView {
         self.addSubview(text)
         
         text.snp.makeConstraints { (make) in
-            make.leading.equalTo(self).offset(20)
-            make.trailing.equalTo(self).offset(-20)
+            make.leading.equalTo(self)
+            make.trailing.equalTo(self)
             make.top.equalTo(self).offset(20)
         }
         

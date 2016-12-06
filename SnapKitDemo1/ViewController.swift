@@ -18,7 +18,7 @@ class ViewController: UIViewController {
         self.navigationItem.title = "ViewController"
         
         let view = UIView()
-        view.backgroundColor = .red
+//        view.backgroundColor = .red
 
         self.view.addSubview(view)
         view.snp.makeConstraints { make in
@@ -32,8 +32,7 @@ class ViewController: UIViewController {
         label.textColor = .green
         label.textAlignment = .center
         label.font = UIFont.systemFont(ofSize: 30)
-        label.text = "SnapKit"
-        label.backgroundColor = .yellow
+//        label.backgroundColor = .yellow
         self.view.addSubview(label)
         label.snp.makeConstraints { (make) in
             make.top.equalTo(view.snp.bottom).offset(20)
@@ -42,7 +41,7 @@ class ViewController: UIViewController {
         }
         
         let viewBottom = UIView()
-        viewBottom.backgroundColor = .blue
+//        viewBottom.backgroundColor = .blue
         self.view.addSubview(viewBottom)
         viewBottom.snp.makeConstraints { (make) in
             make.leading.trailing.equalTo(view)
@@ -55,7 +54,7 @@ class ViewController: UIViewController {
         button.setTitleColor(.red, for: .normal)
         button.setTitleColor(.gray, for: .highlighted)
         button.addTarget(self, action: #selector(ViewController.touchButton(sender:)), for: .touchUpInside)
-        button.backgroundColor = .yellow
+//        button.backgroundColor = .yellow
         viewBottom.addSubview(button)
         
         button.snp.makeConstraints { (make) in
@@ -158,12 +157,12 @@ class ViewController: UIViewController {
 //        if UIApplication.shared.canOpenURL(url as! URL) {
 //            UIApplication.shared.open(url as! URL, options: ["key": "value"], completionHandler: nil)
 //        }
-        let cus = CustomAlert(frame: CGRect(x: 0, y: 0, width: 300, height: 200))
+        let cus = CustomAlert(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: 500))
         cus.delegate = self
         cus.closeAction = {
             print("++++++++++++++++++++++++++++++")
         }
-        DDPopManager.showCenterAlert(withCustomView: cus)
+        DDPopManager.showActionSheet(withCustomView: cus)
     }
     
     override func didReceiveMemoryWarning() {
