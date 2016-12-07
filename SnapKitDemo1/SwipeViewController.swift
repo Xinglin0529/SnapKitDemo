@@ -43,6 +43,25 @@ class SwipeViewController: UIViewController {
         }
         swipe.items = [item1, item2, item3]
 
+        let mar1 = MarqueeItem(content: "safe_loan_bg_image", id: 1)
+        let mar2 = MarqueeItem(content: "safe_loan_huzhao_img", id: 2)
+        let mar3 = MarqueeItem(content: "safe_loan_prediction_header_bgimage", id: 3)
+
+        let marquee = LDMarquee()
+        marquee.textFont = 20
+        marquee.textColor = .red
+        marquee.marqueeBackgroundColor = .yellow
+        marquee.callback = {
+            print("selecte item is \($0)")
+        }
+        self.view.addSubview(marquee)
+        marquee.snp.makeConstraints { (make) in
+            make.leading.trailing.equalTo(self.view)
+            make.top.equalTo(84)
+            make.height.equalTo(30)
+        }
+        marquee.messages = [mar1, mar2, mar3]
+        
 //        let imageV = UIImageView()
 //        imageV.image = UIImage.init(named: "safe_loan_bg_image")
 //        imageV.frame = CGRect(x: 100, y: 400, width: 80, height: 80)

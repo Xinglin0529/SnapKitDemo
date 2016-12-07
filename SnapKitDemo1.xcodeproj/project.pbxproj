@@ -13,6 +13,7 @@
 		AA1181791DF6932A000EF87D /* SwipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1181781DF6932A000EF87D /* SwipeViewController.swift */; };
 		AA11817B1DF696B1000EF87D /* SwipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA11817A1DF696B1000EF87D /* SwipeView.swift */; };
 		AA11817D1DF6AC96000EF87D /* SwipeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA11817C1DF6AC96000EF87D /* SwipeCell.swift */; };
+		AA11817F1DF83302000EF87D /* LDMarquee.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA11817E1DF83302000EF87D /* LDMarquee.swift */; };
 		AA6681921DBDEE9300D496E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6681911DBDEE9300D496E9 /* AppDelegate.swift */; };
 		AA6681941DBDEE9300D496E9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6681931DBDEE9300D496E9 /* ViewController.swift */; };
 		AA6681971DBDEE9300D496E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA6681951DBDEE9300D496E9 /* Main.storyboard */; };
@@ -48,6 +49,7 @@
 		AA1181781DF6932A000EF87D /* SwipeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeViewController.swift; sourceTree = "<group>"; };
 		AA11817A1DF696B1000EF87D /* SwipeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeView.swift; sourceTree = "<group>"; };
 		AA11817C1DF6AC96000EF87D /* SwipeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeCell.swift; sourceTree = "<group>"; };
+		AA11817E1DF83302000EF87D /* LDMarquee.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LDMarquee.swift; sourceTree = "<group>"; };
 		AA66818E1DBDEE9300D496E9 /* SnapKitDemo1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SnapKitDemo1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA6681911DBDEE9300D496E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AA6681931DBDEE9300D496E9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 				AA083B3A1DC3385C0018D82F /* Menu */,
 				AA6681911DBDEE9300D496E9 /* AppDelegate.swift */,
 				AA6681931DBDEE9300D496E9 /* ViewController.swift */,
+				AA11817E1DF83302000EF87D /* LDMarquee.swift */,
 				AA11817A1DF696B1000EF87D /* SwipeView.swift */,
 				AA11817C1DF6AC96000EF87D /* SwipeCell.swift */,
 				AA1181781DF6932A000EF87D /* SwipeViewController.swift */,
@@ -288,6 +291,7 @@
 				AA6681921DBDEE9300D496E9 /* AppDelegate.swift in Sources */,
 				AA6E642B1DC6EE3600137DD8 /* DDPopCategory.swift in Sources */,
 				AAC3CA3D1DD4107100000E9B /* CustomPrefix.swift in Sources */,
+				AA11817F1DF83302000EF87D /* LDMarquee.swift in Sources */,
 				AA6E64331DC750E900137DD8 /* CustomAlert.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
