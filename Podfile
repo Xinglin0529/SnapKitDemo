@@ -8,6 +8,7 @@ pod 'Alamofire'
 pod 'SwiftyJSON'
 pod 'RxSwift'
 pod 'RxCocoa'
+#pod 'Kingfisher'
 
 #pod 'DZNEmptyDataSet'
 end

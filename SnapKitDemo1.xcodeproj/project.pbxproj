@@ -10,6 +10,9 @@
 		92D0B41DC5209E93CB3D25C1 /* Pods_SnapKitDemo1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BACD6BEC5A32F4A8BC62B94 /* Pods_SnapKitDemo1.framework */; };
 		A27A4EFF1DF412E00065C69F /* HelloWorld.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A27A4EFE1DF412E00065C69F /* HelloWorld.framework */; };
 		A27A4F001DF412E60065C69F /* HelloWorld.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = A27A4EFE1DF412E00065C69F /* HelloWorld.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		AA1181791DF6932A000EF87D /* SwipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1181781DF6932A000EF87D /* SwipeViewController.swift */; };
+		AA11817B1DF696B1000EF87D /* SwipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA11817A1DF696B1000EF87D /* SwipeView.swift */; };
+		AA11817D1DF6AC96000EF87D /* SwipeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA11817C1DF6AC96000EF87D /* SwipeCell.swift */; };
 		AA6681921DBDEE9300D496E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6681911DBDEE9300D496E9 /* AppDelegate.swift */; };
 		AA6681941DBDEE9300D496E9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6681931DBDEE9300D496E9 /* ViewController.swift */; };
 		AA6681971DBDEE9300D496E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA6681951DBDEE9300D496E9 /* Main.storyboard */; };
@@ -42,6 +45,9 @@
 		7CD21BD17FD2074DC497641F /* Pods-SnapKitDemo1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnapKitDemo1.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SnapKitDemo1/Pods-SnapKitDemo1.debug.xcconfig"; sourceTree = "<group>"; };
 		A27A4EFE1DF412E00065C69F /* HelloWorld.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = HelloWorld.framework; sourceTree = "<group>"; };
 		A3568BC331816293BA9B294E /* Pods-SnapKitDemo1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnapKitDemo1.release.xcconfig"; path = "Pods/Target Support Files/Pods-SnapKitDemo1/Pods-SnapKitDemo1.release.xcconfig"; sourceTree = "<group>"; };
+		AA1181781DF6932A000EF87D /* SwipeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeViewController.swift; sourceTree = "<group>"; };
+		AA11817A1DF696B1000EF87D /* SwipeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeView.swift; sourceTree = "<group>"; };
+		AA11817C1DF6AC96000EF87D /* SwipeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeCell.swift; sourceTree = "<group>"; };
 		AA66818E1DBDEE9300D496E9 /* SnapKitDemo1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SnapKitDemo1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA6681911DBDEE9300D496E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AA6681931DBDEE9300D496E9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -122,6 +128,9 @@
 				AA083B3A1DC3385C0018D82F /* Menu */,
 				AA6681911DBDEE9300D496E9 /* AppDelegate.swift */,
 				AA6681931DBDEE9300D496E9 /* ViewController.swift */,
+				AA11817A1DF696B1000EF87D /* SwipeView.swift */,
+				AA11817C1DF6AC96000EF87D /* SwipeCell.swift */,
+				AA1181781DF6932A000EF87D /* SwipeViewController.swift */,
 				AA6681A31DBDF9C700D496E9 /* NextViewController.swift */,
 				AA6681951DBDEE9300D496E9 /* Main.storyboard */,
 				AA6681981DBDEE9300D496E9 /* Assets.xcassets */,
@@ -270,9 +279,12 @@
 			files = (
 				AA6681941DBDEE9300D496E9 /* ViewController.swift in Sources */,
 				AA6E642D1DC71B5D00137DD8 /* DDPopWindow.swift in Sources */,
+				AA11817D1DF6AC96000EF87D /* SwipeCell.swift in Sources */,
+				AA11817B1DF696B1000EF87D /* SwipeView.swift in Sources */,
 				AA6681A41DBDF9C700D496E9 /* NextViewController.swift in Sources */,
 				AA6E64311DC74E8800137DD8 /* DDPopManager.swift in Sources */,
 				AA6E642F1DC7210300137DD8 /* DDBasePopView.swift in Sources */,
+				AA1181791DF6932A000EF87D /* SwipeViewController.swift in Sources */,
 				AA6681921DBDEE9300D496E9 /* AppDelegate.swift in Sources */,
 				AA6E642B1DC6EE3600137DD8 /* DDPopCategory.swift in Sources */,
 				AAC3CA3D1DD4107100000E9B /* CustomPrefix.swift in Sources */,

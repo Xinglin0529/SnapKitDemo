@@ -157,12 +157,12 @@ class ViewController: UIViewController {
 //        if UIApplication.shared.canOpenURL(url as! URL) {
 //            UIApplication.shared.open(url as! URL, options: ["key": "value"], completionHandler: nil)
 //        }
-        let cus = CustomAlert(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: 500))
-        cus.delegate = self
-        cus.closeAction = {
-            print("++++++++++++++++++++++++++++++")
-        }
-        DDPopManager.showActionSheet(withCustomView: cus)
+//        let cus = CustomAlert(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: 500))
+//        cus.delegate = self
+//        cus.closeAction = {
+//        }
+//        DDPopManager.showActionSheet(withCustomView: cus)
+        self.navigationController?.pushViewController(SwipeViewController(), animated: true)
     }
     
     override func didReceiveMemoryWarning() {

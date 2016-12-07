@@ -22,25 +22,46 @@ class NextViewController: UIViewController {
         return v
     }()
     
+    fileprivate var collectionView: UICollectionView = {
+        let flow = UICollectionViewFlowLayout()
+        flow.minimumLineSpacing = 0
+        flow.minimumInteritemSpacing = 0
+        flow.scrollDirection = .horizontal
+        
+        let cv = UICollectionView(frame: UIScreen.main.bounds, collectionViewLayout: flow)
+        cv.backgroundColor = .red
+        return cv
+    }()
+    
+    var items: [SwipeItem] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .white
         // Do any additional setup after loading the view.
         self.navigationItem.title = "NextViewController"
         
-        self.view.addSubview(self.topView)
-        self.topView.snp.makeConstraints { (make) in
-            make.leading.equalTo(100)
-            make.top.equalTo(100)
-            make.size.equalTo(CGSize(width: 60, height: 60))
-        }
-        
-        self.view.addSubview(self.followView)
-        self.followView.snp.makeConstraints { (make) in
-            make.top.equalTo(self.topView.snp.bottom).offset(20)
-            make.centerX.equalTo(self.topView.snp.centerX)
-            make.size.equalTo(CGSize(width: 60, height: 60))
-        }
+//        self.view.addSubview(self.topView)
+//        self.topView.snp.makeConstraints { (make) in
+//            make.leading.equalTo(100)
+//            make.top.equalTo(100)
+//            make.size.equalTo(CGSize(width: 60, height: 60))
+//        }
+//        
+//        self.view.addSubview(self.followView)
+//        self.followView.snp.makeConstraints { (make) in
+//            make.top.equalTo(self.topView.snp.bottom).offset(20)
+//            make.centerX.equalTo(self.topView.snp.centerX)
+//            make.size.equalTo(CGSize(width: 60, height: 60))
+//        }
+        let item1 = SwipeItem(placeHolder: "safe_loan_bg_image", imageUrl: "", reuseIdentifier: "SwipeCell")
+        let item2 = SwipeItem(placeHolder: "safe_loan_bg_image", imageUrl: "", reuseIdentifier: "SwipeCell")
+        let item3 = SwipeItem(placeHolder: "safe_loan_bg_image", imageUrl: "", reuseIdentifier: "SwipeCell")
+        items = [item1, item2, item3]
+        self.view.addSubview(collectionView)
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        collectionView.register(SwipeCell.self, forCellWithReuseIdentifier: "SwipeCell")
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -88,3 +109,34 @@ class NextViewController: UIViewController {
     */
 
 }
+
+extension NextViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        collectionView.deselectItem(at: indexPath, animated: true)
+        print("cell is selected")
+    }
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return items.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let item = items[indexPath.item]
+        let cell = self.collectionView.dequeueReusableCell(withReuseIdentifier: item.reuseIdentifier, for: indexPath)
+        (cell as! Updatable).update(withData: item)
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: UIScreen.main.bounds.size.width, height: 64)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsetsMake(0, 0, 0, 0)
+    }
+}
+
