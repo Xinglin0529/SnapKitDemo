@@ -58,6 +58,18 @@ class SwipeView: UIView {
         }
     }
     
+    var pageIndicatorTintColor: UIColor = .white {
+        willSet {
+            pageControl.pageIndicatorTintColor = newValue
+        }
+    }
+    
+    var currentPageIndicatorTIntColor: UIColor = .blue {
+        willSet {
+            pageControl.currentPageIndicatorTintColor = newValue
+        }
+    }
+    
     var callbackHandler:((Int) -> ())?
     
     fileprivate var currentPage: Int = 0
@@ -66,8 +78,6 @@ class SwipeView: UIView {
     
     fileprivate let pageControl: UIPageControl = {
         let pc = UIPageControl()
-        pc.pageIndicatorTintColor = .gray
-        pc.currentPageIndicatorTintColor = .red
         pc.hidesForSinglePage = true
         return pc
     }()
@@ -97,6 +107,8 @@ class SwipeView: UIView {
         }
         
         self.addSubview(pageControl)
+        pageControl.pageIndicatorTintColor = pageIndicatorTintColor
+        pageControl.currentPageIndicatorTintColor = currentPageIndicatorTIntColor
         pageControl.snp.makeConstraints { (make) in
             make.leading.trailing.equalTo(self)
             make.bottom.equalTo(self.snp.bottom).offset(-5)

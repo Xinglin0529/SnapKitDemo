@@ -30,6 +30,8 @@ class SwipeViewController: UIViewController {
 
         let swipe = SwipeView()
         swipe.autoScroll = true
+        swipe.pageIndicatorTintColor = .gray
+        swipe.currentPageIndicatorTIntColor = .red
         swipe.callbackHandler = {
             print("current page is \($0)")
         }
