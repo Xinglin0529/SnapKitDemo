@@ -14,6 +14,8 @@
 		AA11817B1DF696B1000EF87D /* SwipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA11817A1DF696B1000EF87D /* SwipeView.swift */; };
 		AA11817D1DF6AC96000EF87D /* SwipeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA11817C1DF6AC96000EF87D /* SwipeCell.swift */; };
 		AA11817F1DF83302000EF87D /* LDMarquee.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA11817E1DF83302000EF87D /* LDMarquee.swift */; };
+		AA1181831DF902B8000EF87D /* PersonalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1181821DF902B8000EF87D /* PersonalViewController.swift */; };
+		AA1181851DF90359000EF87D /* ScaleAvatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1181841DF90359000EF87D /* ScaleAvatar.swift */; };
 		AA6681921DBDEE9300D496E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6681911DBDEE9300D496E9 /* AppDelegate.swift */; };
 		AA6681941DBDEE9300D496E9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6681931DBDEE9300D496E9 /* ViewController.swift */; };
 		AA6681971DBDEE9300D496E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA6681951DBDEE9300D496E9 /* Main.storyboard */; };
@@ -50,6 +52,8 @@
 		AA11817A1DF696B1000EF87D /* SwipeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeView.swift; sourceTree = "<group>"; };
 		AA11817C1DF6AC96000EF87D /* SwipeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeCell.swift; sourceTree = "<group>"; };
 		AA11817E1DF83302000EF87D /* LDMarquee.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LDMarquee.swift; sourceTree = "<group>"; };
+		AA1181821DF902B8000EF87D /* PersonalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalViewController.swift; sourceTree = "<group>"; };
+		AA1181841DF90359000EF87D /* ScaleAvatar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScaleAvatar.swift; sourceTree = "<group>"; };
 		AA66818E1DBDEE9300D496E9 /* SnapKitDemo1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SnapKitDemo1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA6681911DBDEE9300D496E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AA6681931DBDEE9300D496E9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -130,6 +134,8 @@
 				AA083B3A1DC3385C0018D82F /* Menu */,
 				AA6681911DBDEE9300D496E9 /* AppDelegate.swift */,
 				AA6681931DBDEE9300D496E9 /* ViewController.swift */,
+				AA1181841DF90359000EF87D /* ScaleAvatar.swift */,
+				AA1181821DF902B8000EF87D /* PersonalViewController.swift */,
 				AA11817E1DF83302000EF87D /* LDMarquee.swift */,
 				AA11817A1DF696B1000EF87D /* SwipeView.swift */,
 				AA11817C1DF6AC96000EF87D /* SwipeCell.swift */,
@@ -281,11 +287,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA6681941DBDEE9300D496E9 /* ViewController.swift in Sources */,
+				AA1181851DF90359000EF87D /* ScaleAvatar.swift in Sources */,
 				AA6E642D1DC71B5D00137DD8 /* DDPopWindow.swift in Sources */,
 				AA11817D1DF6AC96000EF87D /* SwipeCell.swift in Sources */,
 				AA11817B1DF696B1000EF87D /* SwipeView.swift in Sources */,
 				AA6681A41DBDF9C700D496E9 /* NextViewController.swift in Sources */,
 				AA6E64311DC74E8800137DD8 /* DDPopManager.swift in Sources */,
+				AA1181831DF902B8000EF87D /* PersonalViewController.swift in Sources */,
 				AA6E642F1DC7210300137DD8 /* DDBasePopView.swift in Sources */,
 				AA1181791DF6932A000EF87D /* SwipeViewController.swift in Sources */,
 				AA6681921DBDEE9300D496E9 /* AppDelegate.swift in Sources */,

@@ -34,6 +34,7 @@ class SwipeViewController: UIViewController {
         swipe.currentPageIndicatorTIntColor = .red
         swipe.callbackHandler = {
             print("current page is \($0)")
+            self.navigationController?.pushViewController(PersonalViewController(), animated: true)
         }
         self.view.addSubview(swipe)
         swipe.snp.makeConstraints { (make) in
