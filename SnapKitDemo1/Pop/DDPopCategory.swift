@@ -9,8 +9,8 @@
 import Foundation
 import UIKit
 
-extension UIColor {
-    public class func dd_color(withHex hex: UInt) -> UIColor {
+fileprivate extension UIColor {
+    fileprivate class func dd_color(withHex hex: UInt) -> UIColor {
         return UIColor(red: CGFloat((hex & 0xff000000) >> 24) / 255.0,
                        green: CGFloat((hex & 0x00ff0000) >> 16) / 255.0,
                        blue: CGFloat((hex & 0x0000ff00) >> 8) / 255.0,
@@ -18,12 +18,12 @@ extension UIColor {
     }
 }
 
-extension UIImage {
-    public class func dd_image(withColor color: UIColor) -> UIImage {
+fileprivate extension UIImage {
+    fileprivate class func dd_image(withColor color: UIColor) -> UIImage {
         return UIImage.dd_image(withColor: color, size: CGSize(width: 4, height: 4))
     }
     
-    public class func dd_image(withColor color: UIColor, size: CGSize) -> UIImage {
+    fileprivate class func dd_image(withColor color: UIColor, size: CGSize) -> UIImage {
         let rect = CGRect(x: 0, y: 0, width: size.width, height: size.height)
         UIGraphicsBeginImageContext(size)
         let context = UIGraphicsGetCurrentContext()
@@ -34,7 +34,7 @@ extension UIImage {
         return image!.dd_streched()
     }
     
-    public func dd_streched() -> UIImage {
+    fileprivate func dd_streched() -> UIImage {
         let size = self.size
         let insets = UIEdgeInsets(top: (size.height - 1.0) / 2, left: (size.width - 1) / 2, bottom: (size.height - 1.0) / 2, right: (size.width - 1) / 2)
         return self.resizableImage(withCapInsets: insets)

@@ -10,12 +10,6 @@ import UIKit
 
 class PersonalViewController: UIViewController {
     
-    fileprivate let customNavigationBar: UIView = {
-        let v = UIView.init(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: 64))
-            v.backgroundColor = .green
-        return v
-    }()
-    
     fileprivate let tableView: UITableView = {
         let table = UITableView.init(frame: .zero, style: .plain)
         table.tableFooterView = UIView()
@@ -23,9 +17,19 @@ class PersonalViewController: UIViewController {
     }()
     
     fileprivate let headView: ScaleAvatar = {
-        let head = ScaleAvatar(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: 100))
+        let head = ScaleAvatar(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: 200))
         return head
     }()
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        setNavigationBar(with: 1)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        setNavigationBar(with: 0)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,12 +39,9 @@ class PersonalViewController: UIViewController {
         tableView.tableHeaderView = headView
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "UITableViewCell")
         tableView.snp.makeConstraints { (make) in
-            make.edges.equalTo(self.view)
+            make.leading.trailing.bottom.equalTo(self.view)
+            make.top.equalTo(-64)
         }
-        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
-        self.navigationController?.navigationBar.shadowImage = UIImage()
-        let view: UIView = (self.navigationController?.navigationBar.subviews.first)!
-        view.addSubview(customNavigationBar)
     }
 }
 
@@ -49,12 +50,19 @@ extension PersonalViewController: UIScrollViewDelegate {
         let offsetY = scrollView.contentOffset.y
         if offsetY > -64 && offsetY < 0 {
             let abs = fabs(offsetY)
-            customNavigationBar.alpha = (64 - abs) / 64
+            let alpha = (64 - abs) / 64
+            setNavigationBar(with: alpha)
         } else if offsetY <= -64 {
-            self.customNavigationBar.alpha = 0
+            setNavigationBar(with: 0)
         } else{
-            self.customNavigationBar.alpha = 1
+            setNavigationBar(with: 1)
         }
+    }
+    
+    fileprivate func setNavigationBar(with alpha: CGFloat) {
+//        let color = UIColor.ld_color(withHex: 0x28b6ea)
+//        self.navigationController?.navigationBar.setBackgroundColor(color: color.withAlphaComponent(alpha))
+        self.navigationController?.navigationBar.setOverlayAlpha(alpha: alpha)
     }
 }
 

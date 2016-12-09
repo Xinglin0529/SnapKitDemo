@@ -21,14 +21,8 @@ class ScaleAvatar: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.addSubview(avatar)
-        var avatarWH: CGFloat = 0
-        let width = frame.size.width
-        let height = frame.size.height
-        avatarWH = (width <= height) ? (width / 2) : (height / 2)
-        
         avatar.snp.makeConstraints { (make) in
-            make.center.equalTo(self)
-            make.size.equalTo(CGSize(width: avatarWH, height: avatarWH))
+            make.edges.equalTo(self)
         }
     }
     
