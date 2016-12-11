@@ -17,7 +17,19 @@
 		AA1181831DF902B8000EF87D /* PersonalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1181821DF902B8000EF87D /* PersonalViewController.swift */; };
 		AA1181851DF90359000EF87D /* ScaleAvatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1181841DF90359000EF87D /* ScaleAvatar.swift */; };
 		AA1181BA1DFA5659000EF87D /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1181B91DFA5659000EF87D /* Extensions.swift */; };
-		AA1181BC1DFA7D2B000EF87D /* BaseNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1181BB1DFA7D2B000EF87D /* BaseNavigationViewController.swift */; };
+		AA1181C01DFAA296000EF87D /* BaseNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1181BE1DFAA296000EF87D /* BaseNavigationViewController.swift */; };
+		AA1181C11DFAA296000EF87D /* CustomPrefix.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1181BF1DFAA296000EF87D /* CustomPrefix.swift */; };
+		AA1181C31DFAAD6F000EF87D /* DrawingBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1181C21DFAAD6F000EF87D /* DrawingBoard.swift */; };
+		AA1181C61DFB9643000EF87D /* BaseBrush.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1181C51DFB9643000EF87D /* BaseBrush.swift */; };
+		AA1181C81DFB97CD000EF87D /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1181C71DFB97CD000EF87D /* Board.swift */; };
+		AA1181CA1DFB9DEB000EF87D /* PencilBrush.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1181C91DFB9DEB000EF87D /* PencilBrush.swift */; };
+		AA1181CC1DFBA0D2000EF87D /* LineBrush.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1181CB1DFBA0D2000EF87D /* LineBrush.swift */; };
+		AA1181CE1DFBA18F000EF87D /* DashLineBrush.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1181CD1DFBA18F000EF87D /* DashLineBrush.swift */; };
+		AA1181D01DFBA23A000EF87D /* RectangleBrush.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1181CF1DFBA23A000EF87D /* RectangleBrush.swift */; };
+		AA1181D21DFBA38C000EF87D /* EllipseBrush.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1181D11DFBA38C000EF87D /* EllipseBrush.swift */; };
+		AA1181D41DFBA43B000EF87D /* EraserBrush.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1181D31DFBA43B000EF87D /* EraserBrush.swift */; };
+		AA1181D61DFBA6FF000EF87D /* BoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1181D51DFBA6FF000EF87D /* BoardViewController.swift */; };
+		AA1181DA1DFC57CB000EF87D /* SettingBrush.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1181D91DFC57CB000EF87D /* SettingBrush.swift */; };
 		AA6681921DBDEE9300D496E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6681911DBDEE9300D496E9 /* AppDelegate.swift */; };
 		AA6681941DBDEE9300D496E9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6681931DBDEE9300D496E9 /* ViewController.swift */; };
 		AA6681971DBDEE9300D496E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA6681951DBDEE9300D496E9 /* Main.storyboard */; };
@@ -29,7 +41,6 @@
 		AA6E642F1DC7210300137DD8 /* DDBasePopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6E642E1DC7210300137DD8 /* DDBasePopView.swift */; };
 		AA6E64311DC74E8800137DD8 /* DDPopManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6E64301DC74E8800137DD8 /* DDPopManager.swift */; };
 		AA6E64331DC750E900137DD8 /* CustomAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6E64321DC750E900137DD8 /* CustomAlert.swift */; };
-		AAC3CA3D1DD4107100000E9B /* CustomPrefix.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC3CA3C1DD4107100000E9B /* CustomPrefix.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -57,7 +68,19 @@
 		AA1181821DF902B8000EF87D /* PersonalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalViewController.swift; sourceTree = "<group>"; };
 		AA1181841DF90359000EF87D /* ScaleAvatar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScaleAvatar.swift; sourceTree = "<group>"; };
 		AA1181B91DFA5659000EF87D /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		AA1181BB1DFA7D2B000EF87D /* BaseNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNavigationViewController.swift; sourceTree = "<group>"; };
+		AA1181BE1DFAA296000EF87D /* BaseNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNavigationViewController.swift; sourceTree = "<group>"; };
+		AA1181BF1DFAA296000EF87D /* CustomPrefix.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomPrefix.swift; sourceTree = "<group>"; };
+		AA1181C21DFAAD6F000EF87D /* DrawingBoard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawingBoard.swift; sourceTree = "<group>"; };
+		AA1181C51DFB9643000EF87D /* BaseBrush.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseBrush.swift; sourceTree = "<group>"; };
+		AA1181C71DFB97CD000EF87D /* Board.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
+		AA1181C91DFB9DEB000EF87D /* PencilBrush.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PencilBrush.swift; sourceTree = "<group>"; };
+		AA1181CB1DFBA0D2000EF87D /* LineBrush.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineBrush.swift; sourceTree = "<group>"; };
+		AA1181CD1DFBA18F000EF87D /* DashLineBrush.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashLineBrush.swift; sourceTree = "<group>"; };
+		AA1181CF1DFBA23A000EF87D /* RectangleBrush.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RectangleBrush.swift; sourceTree = "<group>"; };
+		AA1181D11DFBA38C000EF87D /* EllipseBrush.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EllipseBrush.swift; sourceTree = "<group>"; };
+		AA1181D31DFBA43B000EF87D /* EraserBrush.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EraserBrush.swift; sourceTree = "<group>"; };
+		AA1181D51DFBA6FF000EF87D /* BoardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardViewController.swift; sourceTree = "<group>"; };
+		AA1181D91DFC57CB000EF87D /* SettingBrush.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingBrush.swift; sourceTree = "<group>"; };
 		AA66818E1DBDEE9300D496E9 /* SnapKitDemo1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SnapKitDemo1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA6681911DBDEE9300D496E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AA6681931DBDEE9300D496E9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -71,7 +94,6 @@
 		AA6E642E1DC7210300137DD8 /* DDBasePopView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDBasePopView.swift; sourceTree = "<group>"; };
 		AA6E64301DC74E8800137DD8 /* DDPopManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDPopManager.swift; sourceTree = "<group>"; };
 		AA6E64321DC750E900137DD8 /* CustomAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomAlert.swift; sourceTree = "<group>"; };
-		AAC3CA3C1DD4107100000E9B /* CustomPrefix.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomPrefix.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,13 +126,29 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		AA083B3A1DC3385C0018D82F /* Menu */ = {
+		AA1181BD1DFAA296000EF87D /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				AAC3CA3C1DD4107100000E9B /* CustomPrefix.swift */,
-				AA1181BB1DFA7D2B000EF87D /* BaseNavigationViewController.swift */,
+				AA1181BE1DFAA296000EF87D /* BaseNavigationViewController.swift */,
+				AA1181BF1DFAA296000EF87D /* CustomPrefix.swift */,
 			);
-			path = Menu;
+			path = Base;
+			sourceTree = "<group>";
+		};
+		AA1181C41DFAFDD8000EF87D /* DrawingBoard */ = {
+			isa = PBXGroup;
+			children = (
+				AA1181C51DFB9643000EF87D /* BaseBrush.swift */,
+				AA1181C71DFB97CD000EF87D /* Board.swift */,
+				AA1181C91DFB9DEB000EF87D /* PencilBrush.swift */,
+				AA1181CB1DFBA0D2000EF87D /* LineBrush.swift */,
+				AA1181CD1DFBA18F000EF87D /* DashLineBrush.swift */,
+				AA1181CF1DFBA23A000EF87D /* RectangleBrush.swift */,
+				AA1181D11DFBA38C000EF87D /* EllipseBrush.swift */,
+				AA1181D31DFBA43B000EF87D /* EraserBrush.swift */,
+				AA1181D91DFC57CB000EF87D /* SettingBrush.swift */,
+			);
+			path = DrawingBoard;
 			sourceTree = "<group>";
 		};
 		AA6681851DBDEE9300D496E9 = {
@@ -134,10 +172,13 @@
 		AA6681901DBDEE9300D496E9 /* SnapKitDemo1 */ = {
 			isa = PBXGroup;
 			children = (
+				AA1181C41DFAFDD8000EF87D /* DrawingBoard */,
+				AA1181BD1DFAA296000EF87D /* Base */,
 				A27A4EFE1DF412E00065C69F /* HelloWorld.framework */,
 				AA6E64291DC6ECF200137DD8 /* Pop */,
-				AA083B3A1DC3385C0018D82F /* Menu */,
 				AA6681911DBDEE9300D496E9 /* AppDelegate.swift */,
+				AA1181D51DFBA6FF000EF87D /* BoardViewController.swift */,
+				AA1181C21DFAAD6F000EF87D /* DrawingBoard.swift */,
 				AA1181B91DFA5659000EF87D /* Extensions.swift */,
 				AA6681931DBDEE9300D496E9 /* ViewController.swift */,
 				AA1181841DF90359000EF87D /* ScaleAvatar.swift */,
@@ -293,22 +334,33 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA6681941DBDEE9300D496E9 /* ViewController.swift in Sources */,
+				AA1181C31DFAAD6F000EF87D /* DrawingBoard.swift in Sources */,
+				AA1181C81DFB97CD000EF87D /* Board.swift in Sources */,
 				AA1181851DF90359000EF87D /* ScaleAvatar.swift in Sources */,
 				AA6E642D1DC71B5D00137DD8 /* DDPopWindow.swift in Sources */,
+				AA1181C11DFAA296000EF87D /* CustomPrefix.swift in Sources */,
 				AA11817D1DF6AC96000EF87D /* SwipeCell.swift in Sources */,
+				AA1181C61DFB9643000EF87D /* BaseBrush.swift in Sources */,
 				AA11817B1DF696B1000EF87D /* SwipeView.swift in Sources */,
 				AA6681A41DBDF9C700D496E9 /* NextViewController.swift in Sources */,
+				AA1181CE1DFBA18F000EF87D /* DashLineBrush.swift in Sources */,
 				AA6E64311DC74E8800137DD8 /* DDPopManager.swift in Sources */,
+				AA1181CA1DFB9DEB000EF87D /* PencilBrush.swift in Sources */,
 				AA1181831DF902B8000EF87D /* PersonalViewController.swift in Sources */,
 				AA6E642F1DC7210300137DD8 /* DDBasePopView.swift in Sources */,
 				AA1181791DF6932A000EF87D /* SwipeViewController.swift in Sources */,
+				AA1181D01DFBA23A000EF87D /* RectangleBrush.swift in Sources */,
+				AA1181D61DFBA6FF000EF87D /* BoardViewController.swift in Sources */,
 				AA6681921DBDEE9300D496E9 /* AppDelegate.swift in Sources */,
-				AA1181BC1DFA7D2B000EF87D /* BaseNavigationViewController.swift in Sources */,
 				AA6E642B1DC6EE3600137DD8 /* DDPopCategory.swift in Sources */,
-				AAC3CA3D1DD4107100000E9B /* CustomPrefix.swift in Sources */,
 				AA1181BA1DFA5659000EF87D /* Extensions.swift in Sources */,
+				AA1181D41DFBA43B000EF87D /* EraserBrush.swift in Sources */,
+				AA1181CC1DFBA0D2000EF87D /* LineBrush.swift in Sources */,
+				AA1181C01DFAA296000EF87D /* BaseNavigationViewController.swift in Sources */,
+				AA1181D21DFBA38C000EF87D /* EllipseBrush.swift in Sources */,
 				AA11817F1DF83302000EF87D /* LDMarquee.swift in Sources */,
 				AA6E64331DC750E900137DD8 /* CustomAlert.swift in Sources */,
+				AA1181DA1DFC57CB000EF87D /* SettingBrush.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

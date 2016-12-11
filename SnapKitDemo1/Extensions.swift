@@ -33,6 +33,10 @@ extension UIColor {
                        blue: CGFloat((hex & 0x0000ff00) >> 8) / 255.0,
                        alpha: CGFloat(hex & 0x000000ff) / 255.0)
     }
+    func rgbComponents() -> (CGFloat, CGFloat, CGFloat) {
+        let components =  self.cgColor.components
+        return (components![0], components![1], components![2])
+    }
 }
 
 fileprivate var backgroundKey = "backgroundKey"

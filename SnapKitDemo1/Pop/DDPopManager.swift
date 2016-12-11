@@ -31,10 +31,6 @@ class DDPopManager: NSObject {
     public class func showActionSheet(withCustomView customView: UIView) -> DDBasePopView {
         return createPopView(type: .Sheet, customView: customView)
     }
-//    @discardableResult
-//    public class func show(withCustomAnimation customView: UIView) -> DDBasePopView {
-//        return createPopView(type: .Custom, customView: customView)
-//    }
     
     private class func createPopView(type: DDPopupType, customView: UIView) -> DDBasePopView {
         DDPopManager.initConfig()

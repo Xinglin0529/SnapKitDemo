@@ -16,17 +16,17 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         self.navigationItem.title = "ViewController"
-        
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(title: "画板", style: .plain, target: self, action: #selector(ViewController.openBoard))
         let view = UIView()
 //        view.backgroundColor = .red
 
         self.view.addSubview(view)
-        view.snp.makeConstraints { make in
-            make.leading.equalTo(15)
-            make.trailing.equalTo(-15)
-            make.top.equalTo(64)
-            make.height.equalTo(200)
-        }
+//        view.snp.makeConstraints { make in
+//            make.leading.equalTo(15)
+//            make.trailing.equalTo(-15)
+//            make.top.equalTo(64)
+//            make.height.equalTo(200)
+//        }
         
         let label = UILabel()
         label.textColor = .green
@@ -34,20 +34,20 @@ class ViewController: UIViewController {
         label.font = UIFont.systemFont(ofSize: 30)
 //        label.backgroundColor = .yellow
         self.view.addSubview(label)
-        label.snp.makeConstraints { (make) in
-            make.top.equalTo(view.snp.bottom).offset(20)
-            make.leading.trailing.equalTo(view)
-            make.height.equalTo(60)
-        }
+//        label.snp.makeConstraints { (make) in
+//            make.top.equalTo(view.snp.bottom).offset(20)
+//            make.leading.trailing.equalTo(view)
+//            make.height.equalTo(60)
+//        }
         
         let viewBottom = UIView()
 //        viewBottom.backgroundColor = .blue
         self.view.addSubview(viewBottom)
-        viewBottom.snp.makeConstraints { (make) in
-            make.leading.trailing.equalTo(view)
-            make.bottom.equalTo(self.view.snp.bottom).offset(-20)
-            make.top.equalTo(label.snp.bottom).offset(20)
-        }
+//        viewBottom.snp.makeConstraints { (make) in
+//            make.leading.trailing.equalTo(view)
+//            make.bottom.equalTo(self.view.snp.bottom).offset(-20)
+//            make.top.equalTo(label.snp.bottom).offset(20)
+//        }
         
         let button = UIButton(type: .custom)
         button.setTitle("Touch", for: .normal)
@@ -57,10 +57,10 @@ class ViewController: UIViewController {
 //        button.backgroundColor = .yellow
         viewBottom.addSubview(button)
         
-        button.snp.makeConstraints { (make) in
-            make.center.equalTo(viewBottom.snp.center)
-            make.size.equalTo(CGSize(width: 200, height: 60))
-        }
+//        button.snp.makeConstraints { (make) in
+//            make.center.equalTo(viewBottom.snp.center)
+//            make.size.equalTo(CGSize(width: 200, height: 60))
+//        }
         
         let v1 = Init(UIView()) {
             $0.backgroundColor = UIColor.black
@@ -75,9 +75,20 @@ class ViewController: UIViewController {
             $0.top.equalTo(10)
         }
         
-        gcdTest()
+        let set = SettingBrush.init(frame: CGRect(x: 0, y: 100, width: UIScreen.main.bounds.size.width, height: 260), type: .brush(1, UIColor.red))
+        set.backgroundColor = .white
+        self.view.addSubview(set)
+//        set.snp.makeConstraints { (make) in
+//            make.center.equalTo(self.view.snp.center)
+//            make.size.equalTo(CGSize(width: UIScreen.main.bounds.size.width, height: 200))
+//        }
+        
+//        gcdTest()
     }
     
+    func openBoard() {
+        self.navigationController?.pushViewController(BoardViewController(), animated: true)
+    }
     
     func gcdTest() {
         print("current queue \(Thread.current), isMainThread \(Thread.isMainThread)")
