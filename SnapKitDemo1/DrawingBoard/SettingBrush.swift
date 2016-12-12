@@ -94,13 +94,13 @@ class SettingBrush: DDBasePopView {
         self.addSubview(minLabel)
         
         let fontSlider = UISlider()
-        fontSlider.value = Float(fontWeight)
         fontSlider.minimumValue = 1
         fontSlider.maximumValue = 20
         fontSlider.minimumTrackTintColor = .blue
         fontSlider.maximumTrackTintColor = .gray
         fontSlider.addTarget(self, action: #selector(SettingBrush.setupBrushFontWeight(slider:)), for: .valueChanged)
         self.addSubview(fontSlider)
+        fontSlider.setValue(Float(fontWeight), animated: true)
         
         let maxLabel = UILabel()
         maxLabel.tag = 1001
@@ -223,7 +223,6 @@ class SettingBrush: DDBasePopView {
         }
         for i in 0..<3 {
             let colorSlider = UISlider()
-            colorSlider.value = Float(components![i])
             colorSlider.tag = i + 10
             colorSlider.minimumValue = 0
             colorSlider.maximumValue = 255
@@ -251,6 +250,10 @@ class SettingBrush: DDBasePopView {
                 make.centerY.equalTo(colorSlider.snp.centerY)
                 make.trailing.equalTo(-10)
             })
+        }
+        
+        for j in 0..<3 {
+            sliders[j].setValue(Float(components![j]), animated: true)
         }
         return bgView
     }

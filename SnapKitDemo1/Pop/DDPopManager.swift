@@ -34,7 +34,7 @@ class DDPopManager: NSObject {
     
     private class func createPopView(type: DDPopupType, customView: UIView) -> DDBasePopView {
         DDPopManager.initConfig()
-        DDPopManager.touchWildHide(hide: true)
+//        DDPopManager.touchWildHide(hide: true)
         let base: DDBasePopView = DDBasePopView()
         base.bounds = customView.bounds
         base.addSubview(customView)
