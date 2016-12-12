@@ -54,13 +54,13 @@ class ViewController: UIViewController {
         button.setTitleColor(.red, for: .normal)
         button.setTitleColor(.gray, for: .highlighted)
         button.addTarget(self, action: #selector(ViewController.touchButton(sender:)), for: .touchUpInside)
-//        button.backgroundColor = .yellow
-        viewBottom.addSubview(button)
+        button.backgroundColor = .yellow
+        self.view.addSubview(button)
         
-//        button.snp.makeConstraints { (make) in
-//            make.center.equalTo(viewBottom.snp.center)
-//            make.size.equalTo(CGSize(width: 200, height: 60))
-//        }
+        button.snp.makeConstraints { (make) in
+            make.center.equalTo(self.view.snp.center)
+            make.size.equalTo(CGSize(width: 200, height: 60))
+        }
         
         let v1 = Init(UIView()) {
             $0.backgroundColor = UIColor.black
@@ -75,9 +75,9 @@ class ViewController: UIViewController {
             $0.top.equalTo(10)
         }
         
-        let set = SettingBrush.init(frame: CGRect(x: 0, y: 100, width: UIScreen.main.bounds.size.width, height: 260), type: .brush(1, UIColor.red))
-        set.backgroundColor = .white
-        self.view.addSubview(set)
+//        let set = SettingBrush.init(frame: CGRect(x: 0, y: 100, width: UIScreen.main.bounds.size.width, height: 260), type: .brush(1, UIColor.red))
+//        set.backgroundColor = .white
+//        self.view.addSubview(set)
 //        set.snp.makeConstraints { (make) in
 //            make.center.equalTo(self.view.snp.center)
 //            make.size.equalTo(CGSize(width: UIScreen.main.bounds.size.width, height: 200))
@@ -173,7 +173,7 @@ class ViewController: UIViewController {
 //        cus.closeAction = {
 //        }
 //        DDPopManager.showActionSheet(withCustomView: cus)
-        self.navigationController?.pushViewController(SwipeViewController(), animated: true)
+        self.navigationController?.pushViewController(PanViewController(), animated: true)
     }
     
     override func didReceiveMemoryWarning() {

@@ -30,6 +30,8 @@
 		AA1181D41DFBA43B000EF87D /* EraserBrush.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1181D31DFBA43B000EF87D /* EraserBrush.swift */; };
 		AA1181D61DFBA6FF000EF87D /* BoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1181D51DFBA6FF000EF87D /* BoardViewController.swift */; };
 		AA1181DA1DFC57CB000EF87D /* SettingBrush.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1181D91DFC57CB000EF87D /* SettingBrush.swift */; };
+		AA1181DD1DFE49F5000EF87D /* PanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1181DC1DFE49F5000EF87D /* PanViewController.swift */; };
+		AA1181DF1DFE9926000EF87D /* ActionSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1181DE1DFE9925000EF87D /* ActionSheet.swift */; };
 		AA6681921DBDEE9300D496E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6681911DBDEE9300D496E9 /* AppDelegate.swift */; };
 		AA6681941DBDEE9300D496E9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6681931DBDEE9300D496E9 /* ViewController.swift */; };
 		AA6681971DBDEE9300D496E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA6681951DBDEE9300D496E9 /* Main.storyboard */; };
@@ -81,6 +83,8 @@
 		AA1181D31DFBA43B000EF87D /* EraserBrush.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EraserBrush.swift; sourceTree = "<group>"; };
 		AA1181D51DFBA6FF000EF87D /* BoardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardViewController.swift; sourceTree = "<group>"; };
 		AA1181D91DFC57CB000EF87D /* SettingBrush.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingBrush.swift; sourceTree = "<group>"; };
+		AA1181DC1DFE49F5000EF87D /* PanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PanViewController.swift; sourceTree = "<group>"; };
+		AA1181DE1DFE9925000EF87D /* ActionSheet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionSheet.swift; sourceTree = "<group>"; };
 		AA66818E1DBDEE9300D496E9 /* SnapKitDemo1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SnapKitDemo1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA6681911DBDEE9300D496E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AA6681931DBDEE9300D496E9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -151,6 +155,15 @@
 			path = DrawingBoard;
 			sourceTree = "<group>";
 		};
+		AA1181DB1DFE4737000EF87D /* Pan */ = {
+			isa = PBXGroup;
+			children = (
+				AA1181DC1DFE49F5000EF87D /* PanViewController.swift */,
+				AA1181DE1DFE9925000EF87D /* ActionSheet.swift */,
+			);
+			path = Pan;
+			sourceTree = "<group>";
+		};
 		AA6681851DBDEE9300D496E9 = {
 			isa = PBXGroup;
 			children = (
@@ -172,6 +185,7 @@
 		AA6681901DBDEE9300D496E9 /* SnapKitDemo1 */ = {
 			isa = PBXGroup;
 			children = (
+				AA1181DB1DFE4737000EF87D /* Pan */,
 				AA1181C41DFAFDD8000EF87D /* DrawingBoard */,
 				AA1181BD1DFAA296000EF87D /* Base */,
 				A27A4EFE1DF412E00065C69F /* HelloWorld.framework */,
@@ -346,6 +360,7 @@
 				AA1181CE1DFBA18F000EF87D /* DashLineBrush.swift in Sources */,
 				AA6E64311DC74E8800137DD8 /* DDPopManager.swift in Sources */,
 				AA1181CA1DFB9DEB000EF87D /* PencilBrush.swift in Sources */,
+				AA1181DF1DFE9926000EF87D /* ActionSheet.swift in Sources */,
 				AA1181831DF902B8000EF87D /* PersonalViewController.swift in Sources */,
 				AA6E642F1DC7210300137DD8 /* DDBasePopView.swift in Sources */,
 				AA1181791DF6932A000EF87D /* SwipeViewController.swift in Sources */,
@@ -354,6 +369,7 @@
 				AA6681921DBDEE9300D496E9 /* AppDelegate.swift in Sources */,
 				AA6E642B1DC6EE3600137DD8 /* DDPopCategory.swift in Sources */,
 				AA1181BA1DFA5659000EF87D /* Extensions.swift in Sources */,
+				AA1181DD1DFE49F5000EF87D /* PanViewController.swift in Sources */,
 				AA1181D41DFBA43B000EF87D /* EraserBrush.swift in Sources */,
 				AA1181CC1DFBA0D2000EF87D /* LineBrush.swift in Sources */,
 				AA1181C01DFAA296000EF87D /* BaseNavigationViewController.swift in Sources */,

@@ -25,7 +25,19 @@ class Board: UIImageView {
         self.strokeWidth = 1
         self.strokeColor = .black
         super.init(frame: frame)
+        self.backgroundColor = .white
         self.isUserInteractionEnabled = true
+    }
+    
+    func takeImage() -> UIImage {
+        UIGraphicsBeginImageContext(self.bounds.size)
+        let context = UIGraphicsGetCurrentContext()
+        context?.setFillColor((self.backgroundColor?.cgColor)!)
+        UIRectFill(self.bounds)
+        self.image?.draw(in: self.bounds)
+        let img = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return img!
     }
     
     required init?(coder aDecoder: NSCoder) {
