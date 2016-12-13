@@ -52,7 +52,7 @@ class BoardViewController: UIViewController {
         self.view.addSubview(board)
         board.snp.makeConstraints { (make) in
             make.leading.trailing.equalTo(self.view)
-            make.top.equalTo(segmentControl.snp.bottom)
+            make.top.equalTo(segmentControl.snp.bottom).offset(1)
             make.bottom.equalTo(toolBar.snp.top)
         }
         
@@ -60,7 +60,7 @@ class BoardViewController: UIViewController {
         let flexible1 = UIBarButtonItem.init(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
         let item2 = UIBarButtonItem.init(title: "背景设置", style: .plain, target: self, action: #selector(BoardViewController.setBackgroundImage))
         let flexible2 = UIBarButtonItem.init(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
-        let item3 = UIBarButtonItem.init(title: "保存到图库", style: .plain, target: self, action: #selector(BoardViewController.setBrush))
+        let item3 = UIBarButtonItem.init(title: "保存到图库", style: .plain, target: self, action: #selector(BoardViewController.saveToLibrary))
         toolBar.items = [item1, flexible1, item2, flexible2, item3]
     }
     
