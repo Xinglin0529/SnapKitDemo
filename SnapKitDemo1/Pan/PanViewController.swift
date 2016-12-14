@@ -34,6 +34,12 @@ class PanViewController: UIViewController {
         actionSheet.snp.makeConstraints { (make) in
             make.edges.equalTo(self.view)
         }
+        
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(title: "拼图", style: .plain, target: self, action: #selector(PanViewController.gotoPuzzleController))
+    }
+    
+    @objc private func gotoPuzzleController() {
+        self.navigationController?.pushViewController(PuzzleViewController(), animated: true)
     }
     
     @objc private func panGestureRecognizedAction(pan: UIPanGestureRecognizer) {

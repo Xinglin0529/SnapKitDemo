@@ -45,6 +45,17 @@
 		AA6E64331DC750E900137DD8 /* CustomAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6E64321DC750E900137DD8 /* CustomAlert.swift */; };
 		AAF26FDF1DFF962500C4FF26 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF26FDE1DFF962500C4FF26 /* CollectionViewController.swift */; };
 		AAF26FE11DFF963F00C4FF26 /* EditorCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF26FE01DFF963F00C4FF26 /* EditorCollectionViewCell.swift */; };
+		AAF26FE31DFFDE4300C4FF26 /* PuzzleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF26FE21DFFDE4300C4FF26 /* PuzzleViewController.swift */; };
+		AAF26FE51DFFDE6700C4FF26 /* PuzzleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF26FE41DFFDE6700C4FF26 /* PuzzleView.swift */; };
+		AAF26FF01DFFDF5E00C4FF26 /* image1.png in Resources */ = {isa = PBXBuildFile; fileRef = AAF26FE71DFFDF5E00C4FF26 /* image1.png */; };
+		AAF26FF11DFFDF5E00C4FF26 /* image2.png in Resources */ = {isa = PBXBuildFile; fileRef = AAF26FE81DFFDF5E00C4FF26 /* image2.png */; };
+		AAF26FF21DFFDF5E00C4FF26 /* image3.png in Resources */ = {isa = PBXBuildFile; fileRef = AAF26FE91DFFDF5E00C4FF26 /* image3.png */; };
+		AAF26FF31DFFDF5E00C4FF26 /* image4.png in Resources */ = {isa = PBXBuildFile; fileRef = AAF26FEA1DFFDF5E00C4FF26 /* image4.png */; };
+		AAF26FF41DFFDF5E00C4FF26 /* image5.png in Resources */ = {isa = PBXBuildFile; fileRef = AAF26FEB1DFFDF5E00C4FF26 /* image5.png */; };
+		AAF26FF51DFFDF5E00C4FF26 /* image6.png in Resources */ = {isa = PBXBuildFile; fileRef = AAF26FEC1DFFDF5E00C4FF26 /* image6.png */; };
+		AAF26FF61DFFDF5E00C4FF26 /* image7.png in Resources */ = {isa = PBXBuildFile; fileRef = AAF26FED1DFFDF5E00C4FF26 /* image7.png */; };
+		AAF26FF71DFFDF5E00C4FF26 /* image8.png in Resources */ = {isa = PBXBuildFile; fileRef = AAF26FEE1DFFDF5E00C4FF26 /* image8.png */; };
+		AAF26FF81DFFDF5E00C4FF26 /* image9.png in Resources */ = {isa = PBXBuildFile; fileRef = AAF26FEF1DFFDF5E00C4FF26 /* image9.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -102,6 +113,17 @@
 		AA6E64321DC750E900137DD8 /* CustomAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomAlert.swift; sourceTree = "<group>"; };
 		AAF26FDE1DFF962500C4FF26 /* CollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		AAF26FE01DFF963F00C4FF26 /* EditorCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditorCollectionViewCell.swift; sourceTree = "<group>"; };
+		AAF26FE21DFFDE4300C4FF26 /* PuzzleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PuzzleViewController.swift; sourceTree = "<group>"; };
+		AAF26FE41DFFDE6700C4FF26 /* PuzzleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PuzzleView.swift; sourceTree = "<group>"; };
+		AAF26FE71DFFDF5E00C4FF26 /* image1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image1.png; sourceTree = "<group>"; };
+		AAF26FE81DFFDF5E00C4FF26 /* image2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image2.png; sourceTree = "<group>"; };
+		AAF26FE91DFFDF5E00C4FF26 /* image3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image3.png; sourceTree = "<group>"; };
+		AAF26FEA1DFFDF5E00C4FF26 /* image4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image4.png; sourceTree = "<group>"; };
+		AAF26FEB1DFFDF5E00C4FF26 /* image5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image5.png; sourceTree = "<group>"; };
+		AAF26FEC1DFFDF5E00C4FF26 /* image6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image6.png; sourceTree = "<group>"; };
+		AAF26FED1DFFDF5E00C4FF26 /* image7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image7.png; sourceTree = "<group>"; };
+		AAF26FEE1DFFDF5E00C4FF26 /* image8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image8.png; sourceTree = "<group>"; };
+		AAF26FEF1DFFDF5E00C4FF26 /* image9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image9.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,7 +185,9 @@
 			isa = PBXGroup;
 			children = (
 				AA1181DC1DFE49F5000EF87D /* PanViewController.swift */,
+				AAF26FE21DFFDE4300C4FF26 /* PuzzleViewController.swift */,
 				AA1181DE1DFE9925000EF87D /* ActionSheet.swift */,
+				AAF26FE41DFFDE6700C4FF26 /* PuzzleView.swift */,
 			);
 			path = Pan;
 			sourceTree = "<group>";
@@ -189,6 +213,7 @@
 		AA6681901DBDEE9300D496E9 /* SnapKitDemo1 */ = {
 			isa = PBXGroup;
 			children = (
+				AAF26FE61DFFDF5E00C4FF26 /* sources */,
 				AAF26FDD1DFF95FF00C4FF26 /* Editor */,
 				AA1181DB1DFE4737000EF87D /* Pan */,
 				AA1181C41DFAFDD8000EF87D /* DrawingBoard */,
@@ -234,6 +259,22 @@
 				AAF26FE01DFF963F00C4FF26 /* EditorCollectionViewCell.swift */,
 			);
 			path = Editor;
+			sourceTree = "<group>";
+		};
+		AAF26FE61DFFDF5E00C4FF26 /* sources */ = {
+			isa = PBXGroup;
+			children = (
+				AAF26FE71DFFDF5E00C4FF26 /* image1.png */,
+				AAF26FE81DFFDF5E00C4FF26 /* image2.png */,
+				AAF26FE91DFFDF5E00C4FF26 /* image3.png */,
+				AAF26FEA1DFFDF5E00C4FF26 /* image4.png */,
+				AAF26FEB1DFFDF5E00C4FF26 /* image5.png */,
+				AAF26FEC1DFFDF5E00C4FF26 /* image6.png */,
+				AAF26FED1DFFDF5E00C4FF26 /* image7.png */,
+				AAF26FEE1DFFDF5E00C4FF26 /* image8.png */,
+				AAF26FEF1DFFDF5E00C4FF26 /* image9.png */,
+			);
+			path = sources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -301,6 +342,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA66819C1DBDEE9300D496E9 /* LaunchScreen.storyboard in Resources */,
+				AAF26FF81DFFDF5E00C4FF26 /* image9.png in Resources */,
+				AAF26FF61DFFDF5E00C4FF26 /* image7.png in Resources */,
+				AAF26FF51DFFDF5E00C4FF26 /* image6.png in Resources */,
+				AAF26FF71DFFDF5E00C4FF26 /* image8.png in Resources */,
+				AAF26FF21DFFDF5E00C4FF26 /* image3.png in Resources */,
+				AAF26FF11DFFDF5E00C4FF26 /* image2.png in Resources */,
+				AAF26FF01DFFDF5E00C4FF26 /* image1.png in Resources */,
+				AAF26FF31DFFDF5E00C4FF26 /* image4.png in Resources */,
+				AAF26FF41DFFDF5E00C4FF26 /* image5.png in Resources */,
 				AA6681991DBDEE9300D496E9 /* Assets.xcassets in Resources */,
 				AA6681971DBDEE9300D496E9 /* Main.storyboard in Resources */,
 			);
@@ -369,6 +419,7 @@
 				AA1181C11DFAA296000EF87D /* CustomPrefix.swift in Sources */,
 				AA11817D1DF6AC96000EF87D /* SwipeCell.swift in Sources */,
 				AAF26FE11DFF963F00C4FF26 /* EditorCollectionViewCell.swift in Sources */,
+				AAF26FE51DFFDE6700C4FF26 /* PuzzleView.swift in Sources */,
 				AA1181C61DFB9643000EF87D /* BaseBrush.swift in Sources */,
 				AA11817B1DF696B1000EF87D /* SwipeView.swift in Sources */,
 				AA6681A41DBDF9C700D496E9 /* NextViewController.swift in Sources */,
@@ -377,6 +428,7 @@
 				AAF26FDF1DFF962500C4FF26 /* CollectionViewController.swift in Sources */,
 				AA1181CA1DFB9DEB000EF87D /* PencilBrush.swift in Sources */,
 				AA1181DF1DFE9926000EF87D /* ActionSheet.swift in Sources */,
+				AAF26FE31DFFDE4300C4FF26 /* PuzzleViewController.swift in Sources */,
 				AA1181831DF902B8000EF87D /* PersonalViewController.swift in Sources */,
 				AA6E642F1DC7210300137DD8 /* DDBasePopView.swift in Sources */,
 				AA1181791DF6932A000EF87D /* SwipeViewController.swift in Sources */,
