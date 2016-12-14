@@ -9,80 +9,40 @@
 import UIKit
 import SnapKit
 
-class ViewController: UIViewController {
+private let identifier = "UITableViewCell"
 
+struct PushItem {
+    var className: String
+    var title: String
+}
+
+class ViewController: UIViewController {
+    
+    fileprivate let tableView: UITableView = {
+        let table = UITableView.init(frame: .zero, style: .plain)
+        table.tableFooterView = UIView()
+        return table
+    }()
+    
+    fileprivate var dataList: [PushItem]!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        let swipeItem = PushItem.init(className: "SwipeViewController", title: "Swipe")
+        let personalItem = PushItem.init(className: "PersonalViewController", title: "Personal")
+        let boardItem = PushItem.init(className: "BoardViewController", title: "Board")
+        let panItem = PushItem.init(className: "PanViewController", title: "Pan")
+        let puzzleItem = PushItem.init(className: "PuzzleViewController", title: "Puzzle")
+        let editorItem = PushItem.init(className: "CollectionViewController", title: "EditorView")
+        dataList = [swipeItem, personalItem, boardItem, panItem, puzzleItem, editorItem]
         
-        self.navigationItem.title = "ViewController"
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(title: "画板", style: .plain, target: self, action: #selector(ViewController.openBoard))
-        let view = UIView()
-//        view.backgroundColor = .red
-
-        self.view.addSubview(view)
-//        view.snp.makeConstraints { make in
-//            make.leading.equalTo(15)
-//            make.trailing.equalTo(-15)
-//            make.top.equalTo(64)
-//            make.height.equalTo(200)
-//        }
-        
-        let label = UILabel()
-        label.textColor = .green
-        label.textAlignment = .center
-        label.font = UIFont.systemFont(ofSize: 30)
-//        label.backgroundColor = .yellow
-        self.view.addSubview(label)
-//        label.snp.makeConstraints { (make) in
-//            make.top.equalTo(view.snp.bottom).offset(20)
-//            make.leading.trailing.equalTo(view)
-//            make.height.equalTo(60)
-//        }
-        
-        let viewBottom = UIView()
-//        viewBottom.backgroundColor = .blue
-        self.view.addSubview(viewBottom)
-//        viewBottom.snp.makeConstraints { (make) in
-//            make.leading.trailing.equalTo(view)
-//            make.bottom.equalTo(self.view.snp.bottom).offset(-20)
-//            make.top.equalTo(label.snp.bottom).offset(20)
-//        }
-        
-        let button = UIButton(type: .custom)
-        button.setTitle("Touch", for: .normal)
-        button.setTitleColor(.red, for: .normal)
-        button.setTitleColor(.gray, for: .highlighted)
-        button.addTarget(self, action: #selector(ViewController.touchButton(sender:)), for: .touchUpInside)
-        button.backgroundColor = .yellow
-        self.view.addSubview(button)
-        
-        button.snp.makeConstraints { (make) in
-            make.center.equalTo(self.view.snp.center)
-            make.size.equalTo(CGSize(width: 200, height: 60))
+        self.view.addSubview(tableView)
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: identifier)
+        tableView.snp.makeConstraints { (make) in
+            make.edges.equalTo(self.view)
         }
-        
-        let v1 = Init(UIView()) {
-            $0.backgroundColor = UIColor.black
-        }
-        
-        viewBottom.addSubview(v1)
-        
-        v1.snp.makeConstraints {
-            $0.leading.equalTo(15)
-            $0.trailing.equalTo(-15)
-            $0.height.equalTo(60)
-            $0.top.equalTo(10)
-        }
-        
-//        let set = SettingBrush.init(frame: CGRect(x: 0, y: 100, width: UIScreen.main.bounds.size.width, height: 260), type: .brush(1, UIColor.red))
-//        set.backgroundColor = .white
-//        self.view.addSubview(set)
-//        set.snp.makeConstraints { (make) in
-//            make.center.equalTo(self.view.snp.center)
-//            make.size.equalTo(CGSize(width: UIScreen.main.bounds.size.width, height: 200))
-//        }
-        
 //        gcdTest()
     }
     
@@ -161,30 +121,30 @@ class ViewController: UIViewController {
         a = b
         b = temp
     }
-    
-    func touchButton(sender: UIButton) {
-        //self.navigationController?.pushViewController(NextViewController(), animated: true)
-//        let url = NSURL(string: "appApplication://")
-//        if UIApplication.shared.canOpenURL(url as! URL) {
-//            UIApplication.shared.open(url as! URL, options: ["key": "value"], completionHandler: nil)
-//        }
-//        let cus = CustomAlert(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: 500))
-//        cus.delegate = self
-//        cus.closeAction = {
-//        }
-//        DDPopManager.showActionSheet(withCustomView: cus)
-        self.navigationController?.pushViewController(PanViewController(), animated: true)
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+}
+
+extension ViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        let className = dataList[indexPath.row].className
+        let destinationClass: UIViewController.Type = className.toClass() as! UIViewController.Type
+        self.navigationController?.pushViewController(destinationClass.init(), animated: true)
     }
 }
 
-extension ViewController: CustomAlertDelegate {
-    func closeButtonAction() {
-        print("-----------------------------")
+extension ViewController: UITableViewDataSource {
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return dataList.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath)
+        cell.textLabel?.text = dataList[indexPath.row].title
+        return cell
     }
 }
 
