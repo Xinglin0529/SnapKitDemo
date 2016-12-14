@@ -142,3 +142,14 @@ extension PuzzleView {
         return nil
     }
 }
+
+extension Array {
+    mutating func exchaneObject(atIndex index1: Int, withObjectAtIndex index2: Int) {
+        if index1 < self.count && index2 < self.count {
+            let obj1 = self[index1]
+            let obj2 = self[index2]
+            self[index1] = obj2
+            self[index2] = obj1
+        }
+    }
+}
