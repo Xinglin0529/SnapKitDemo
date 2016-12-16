@@ -31,6 +31,7 @@
 		AA1181DA1DFC57CB000EF87D /* SettingBrush.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1181D91DFC57CB000EF87D /* SettingBrush.swift */; };
 		AA1181DD1DFE49F5000EF87D /* PanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1181DC1DFE49F5000EF87D /* PanViewController.swift */; };
 		AA1181DF1DFE9926000EF87D /* ActionSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1181DE1DFE9925000EF87D /* ActionSheet.swift */; };
+		AA5020A81E03E24900AF8409 /* URLSessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5020A71E03E24900AF8409 /* URLSessionViewController.swift */; };
 		AA6681921DBDEE9300D496E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6681911DBDEE9300D496E9 /* AppDelegate.swift */; };
 		AA6681941DBDEE9300D496E9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6681931DBDEE9300D496E9 /* ViewController.swift */; };
 		AA6681971DBDEE9300D496E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA6681951DBDEE9300D496E9 /* Main.storyboard */; };
@@ -96,6 +97,7 @@
 		AA1181D91DFC57CB000EF87D /* SettingBrush.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingBrush.swift; sourceTree = "<group>"; };
 		AA1181DC1DFE49F5000EF87D /* PanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PanViewController.swift; sourceTree = "<group>"; };
 		AA1181DE1DFE9925000EF87D /* ActionSheet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionSheet.swift; sourceTree = "<group>"; };
+		AA5020A71E03E24900AF8409 /* URLSessionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLSessionViewController.swift; sourceTree = "<group>"; };
 		AA66818E1DBDEE9300D496E9 /* SnapKitDemo1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SnapKitDemo1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA6681911DBDEE9300D496E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AA6681931DBDEE9300D496E9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -190,6 +192,14 @@
 			path = Pan;
 			sourceTree = "<group>";
 		};
+		AA5020A61E03E1C700AF8409 /* URLSession */ = {
+			isa = PBXGroup;
+			children = (
+				AA5020A71E03E24900AF8409 /* URLSessionViewController.swift */,
+			);
+			path = URLSession;
+			sourceTree = "<group>";
+		};
 		AA6681851DBDEE9300D496E9 = {
 			isa = PBXGroup;
 			children = (
@@ -211,6 +221,7 @@
 		AA6681901DBDEE9300D496E9 /* SnapKitDemo1 */ = {
 			isa = PBXGroup;
 			children = (
+				AA5020A61E03E1C700AF8409 /* URLSession */,
 				AAF26FE61DFFDF5E00C4FF26 /* sources */,
 				AAF26FDD1DFF95FF00C4FF26 /* Editor */,
 				AA1181DB1DFE4737000EF87D /* Pan */,
@@ -409,6 +420,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA6681941DBDEE9300D496E9 /* ViewController.swift in Sources */,
+				AA5020A81E03E24900AF8409 /* URLSessionViewController.swift in Sources */,
 				AA1181C81DFB97CD000EF87D /* Board.swift in Sources */,
 				AA1181851DF90359000EF87D /* ScaleAvatar.swift in Sources */,
 				AA6E642D1DC71B5D00137DD8 /* DDPopWindow.swift in Sources */,

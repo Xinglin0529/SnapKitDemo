@@ -34,13 +34,15 @@ class ViewController: UIViewController {
         let panItem = PushItem.init(className: "PanViewController", title: "Pan")
         let puzzleItem = PushItem.init(className: "PuzzleViewController", title: "Puzzle")
         let editorItem = PushItem.init(className: "CollectionViewController", title: "EditorView")
+        let sessionItem = PushItem.init(className: "URLSessionViewController", title: "URLSession")
         dataList = [
             swipeItem,
             personalItem,
             boardItem,
             panItem,
             puzzleItem,
-            editorItem
+            editorItem,
+            sessionItem
         ]
         
         self.view.addSubview(tableView)
