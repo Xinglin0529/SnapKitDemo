@@ -581,7 +581,7 @@
 				);
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = SnapKitDemo1/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Pingan.SnapKitDemo1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -601,7 +601,7 @@
 				);
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = SnapKitDemo1/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Pingan.SnapKitDemo1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
