@@ -1,5 +1,5 @@
 source 'https://github.com/CocoaPods/Specs.git'
-platform:ios,'10.0'
+platform:ios,'9.0'
 use_frameworks!
 
 target 'SnapKitDemo1' do
@@ -8,6 +8,8 @@ pod 'Alamofire'
 pod 'SwiftyJSON'
 pod 'RxSwift'
 pod 'RxCocoa'
+pod 'SDWebImage'
+pod 'YYModel'
 #pod 'Kingfisher'
 
 #pod 'DZNEmptyDataSet'

@@ -3,23 +3,31 @@ PODS:
   - RxCocoa (3.0.0):
     - RxSwift (~> 3.0)
   - RxSwift (3.0.0)
+  - SDWebImage (3.8.2):
+    - SDWebImage/Core (= 3.8.2)
+  - SDWebImage/Core (3.8.2)
   - SnapKit (3.0.2)
   - SwiftyJSON (3.1.1)
+  - YYModel (1.0.4)
 
 DEPENDENCIES:
   - Alamofire
   - RxCocoa
   - RxSwift
+  - SDWebImage
   - SnapKit
   - SwiftyJSON
+  - YYModel
 
 SPEC CHECKSUMS:
   Alamofire: 7682d43245de14874acd142ec137b144aa1dd335
   RxCocoa: 0a2f3ae381cf16f4021a4cee7a4420f83058a965
   RxSwift: a930cd662f5b4a7ca9dc3518585dba91dadf497c
+  SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
   SnapKit: 2e456761aa92d4d4067a7a5594c18769d451a8ad
   SwiftyJSON: f0be2e604f83e8405a624e9f891898bf6ed4e019
+  YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
-PODFILE CHECKSUM: 552aaba06dd3b4f4bc3f382fe3254da217f16018
+PODFILE CHECKSUM: 902faeefb0d32e3e4e5d71c8adc72aa3aaa3b7a4
 
 COCOAPODS: 1.1.1
