@@ -10,6 +10,8 @@ pod 'RxSwift'
 pod 'RxCocoa'
 pod 'SDWebImage'
 pod 'YYModel'
+#pod 'SwiftMVVMKit'
+
 #pod 'Kingfisher'
 
 #pod 'DZNEmptyDataSet'

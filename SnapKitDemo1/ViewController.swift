@@ -25,6 +25,7 @@ class ViewController: UIViewController {
     }()
     
     fileprivate var dataList: [PushItem]!
+    private var index = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,10 +54,35 @@ class ViewController: UIViewController {
             make.edges.equalTo(self.view)
         }
 //        gcdTest()
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(title: "show", style: .plain, target: self, action: #selector(ViewController.openNext))
     }
     
-    func openBoard() {
-        self.navigationController?.pushViewController(BoardViewController(), animated: true)
+    func openNext() {
+        if index == dataList.count - 1 {
+            index = 0
+        }
+        let next = nextViewController(index)
+        show(next)
+        index += 1
+    }
+    
+    private func show(_ next: UIViewController) {
+        self.addChildViewController(next)
+        next.view.frame = self.view.bounds
+        self.view.addSubview(next.view)
+        next.didMove(toParentViewController: self)
+    }
+    
+    private func hide(content: UIViewController) {
+        content.willMove(toParentViewController: nil)
+        content.view.removeFromSuperview()
+        content.removeFromParentViewController()
+    }
+    
+    private func nextViewController(_ index: Int) -> UIViewController {
+        let className = dataList[index].className
+        let destinationClass: UIViewController.Type = className.toClass() as! UIViewController.Type
+        return destinationClass.init()
     }
     
     func gcdTest() {
@@ -130,6 +156,10 @@ class ViewController: UIViewController {
         a = b
         b = temp
     }
+}
+
+extension ViewController {
+    
 }
 
 extension ViewController: UITableViewDelegate {

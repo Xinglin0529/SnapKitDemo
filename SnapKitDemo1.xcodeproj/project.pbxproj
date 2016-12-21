@@ -10,6 +10,7 @@
 		92D0B41DC5209E93CB3D25C1 /* Pods_SnapKitDemo1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BACD6BEC5A32F4A8BC62B94 /* Pods_SnapKitDemo1.framework */; };
 		A27A4EFF1DF412E00065C69F /* HelloWorld.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A27A4EFE1DF412E00065C69F /* HelloWorld.framework */; };
 		A27A4F001DF412E60065C69F /* HelloWorld.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = A27A4EFE1DF412E00065C69F /* HelloWorld.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		AA0E24471E0A33A900CFA947 /* PresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0E24461E0A33A900CFA947 /* PresentationController.swift */; };
 		AA1181791DF6932A000EF87D /* SwipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1181781DF6932A000EF87D /* SwipeViewController.swift */; };
 		AA11817B1DF696B1000EF87D /* SwipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA11817A1DF696B1000EF87D /* SwipeView.swift */; };
 		AA11817D1DF6AC96000EF87D /* SwipeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA11817C1DF6AC96000EF87D /* SwipeCell.swift */; };
@@ -76,6 +77,7 @@
 		7CD21BD17FD2074DC497641F /* Pods-SnapKitDemo1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnapKitDemo1.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SnapKitDemo1/Pods-SnapKitDemo1.debug.xcconfig"; sourceTree = "<group>"; };
 		A27A4EFE1DF412E00065C69F /* HelloWorld.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = HelloWorld.framework; sourceTree = "<group>"; };
 		A3568BC331816293BA9B294E /* Pods-SnapKitDemo1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnapKitDemo1.release.xcconfig"; path = "Pods/Target Support Files/Pods-SnapKitDemo1/Pods-SnapKitDemo1.release.xcconfig"; sourceTree = "<group>"; };
+		AA0E24461E0A33A900CFA947 /* PresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentationController.swift; sourceTree = "<group>"; };
 		AA1181781DF6932A000EF87D /* SwipeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeViewController.swift; sourceTree = "<group>"; };
 		AA11817A1DF696B1000EF87D /* SwipeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeView.swift; sourceTree = "<group>"; };
 		AA11817C1DF6AC96000EF87D /* SwipeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeCell.swift; sourceTree = "<group>"; };
@@ -156,6 +158,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		AA0E24451E0A339300CFA947 /* PresentationViewController */ = {
+			isa = PBXGroup;
+			children = (
+				AA0E24461E0A33A900CFA947 /* PresentationController.swift */,
+			);
+			path = PresentationViewController;
+			sourceTree = "<group>";
+		};
 		AA1181BD1DFAA296000EF87D /* Base */ = {
 			isa = PBXGroup;
 			children = (
@@ -221,6 +231,7 @@
 		AA6681901DBDEE9300D496E9 /* SnapKitDemo1 */ = {
 			isa = PBXGroup;
 			children = (
+				AA0E24451E0A339300CFA947 /* PresentationViewController */,
 				AA5020A61E03E1C700AF8409 /* URLSession */,
 				AAF26FE61DFFDF5E00C4FF26 /* sources */,
 				AAF26FDD1DFF95FF00C4FF26 /* Editor */,
@@ -428,6 +439,7 @@
 				AA11817D1DF6AC96000EF87D /* SwipeCell.swift in Sources */,
 				AAF26FE11DFF963F00C4FF26 /* EditorCollectionViewCell.swift in Sources */,
 				AAF26FE51DFFDE6700C4FF26 /* PuzzleView.swift in Sources */,
+				AA0E24471E0A33A900CFA947 /* PresentationController.swift in Sources */,
 				AA1181C61DFB9643000EF87D /* BaseBrush.swift in Sources */,
 				AA11817B1DF696B1000EF87D /* SwipeView.swift in Sources */,
 				AA6681A41DBDF9C700D496E9 /* NextViewController.swift in Sources */,
