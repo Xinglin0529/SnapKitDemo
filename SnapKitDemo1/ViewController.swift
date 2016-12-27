@@ -36,6 +36,7 @@ class ViewController: UIViewController {
         let puzzleItem = PushItem.init(className: "PuzzleViewController", title: "Puzzle")
         let editorItem = PushItem.init(className: "CollectionViewController", title: "EditorView")
         let sessionItem = PushItem.init(className: "URLSessionViewController", title: "URLSession")
+        let sqliteItem = PushItem.init(className: "SqliteViewController", title: "Sqlite")
         dataList = [
             swipeItem,
             personalItem,
@@ -43,7 +44,8 @@ class ViewController: UIViewController {
             panItem,
             puzzleItem,
             editorItem,
-            sessionItem
+            sessionItem,
+            sqliteItem
         ]
         
         self.view.addSubview(tableView)
@@ -167,7 +169,9 @@ extension ViewController: UITableViewDelegate {
         tableView.deselectRow(at: indexPath, animated: true)
         let className = dataList[indexPath.row].className
         let destinationClass: UIViewController.Type = className.toClass() as! UIViewController.Type
-        self.navigationController?.pushViewController(destinationClass.init(), animated: true)
+        let controller = destinationClass.init()
+        controller.title = dataList[indexPath.row].title
+        self.navigationController?.pushViewController(controller, animated: true)
     }
 }
 

@@ -10,6 +10,7 @@ pod 'RxSwift'
 pod 'RxCocoa'
 pod 'SDWebImage'
 pod 'YYModel'
+#pod 'HandyJSON'
 #pod 'SwiftMVVMKit'
 
 #pod 'Kingfisher'
