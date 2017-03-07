@@ -47,6 +47,7 @@
 		AA6E642F1DC7210300137DD8 /* DDBasePopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6E642E1DC7210300137DD8 /* DDBasePopView.swift */; };
 		AA6E64311DC74E8800137DD8 /* DDPopManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6E64301DC74E8800137DD8 /* DDPopManager.swift */; };
 		AA6E64331DC750E900137DD8 /* CustomAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6E64321DC750E900137DD8 /* CustomAlert.swift */; };
+		AAF122C01E6EACEC00E2F756 /* EditorFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF122BF1E6EACEC00E2F756 /* EditorFlowLayout.swift */; };
 		AAF26FDF1DFF962500C4FF26 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF26FDE1DFF962500C4FF26 /* CollectionViewController.swift */; };
 		AAF26FE11DFF963F00C4FF26 /* EditorCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF26FE01DFF963F00C4FF26 /* EditorCollectionViewCell.swift */; };
 		AAF26FE31DFFDE4300C4FF26 /* PuzzleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF26FE21DFFDE4300C4FF26 /* PuzzleViewController.swift */; };
@@ -119,6 +120,7 @@
 		AA6E642E1DC7210300137DD8 /* DDBasePopView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDBasePopView.swift; sourceTree = "<group>"; };
 		AA6E64301DC74E8800137DD8 /* DDPopManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDPopManager.swift; sourceTree = "<group>"; };
 		AA6E64321DC750E900137DD8 /* CustomAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomAlert.swift; sourceTree = "<group>"; };
+		AAF122BF1E6EACEC00E2F756 /* EditorFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditorFlowLayout.swift; sourceTree = "<group>"; };
 		AAF26FDE1DFF962500C4FF26 /* CollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		AAF26FE01DFF963F00C4FF26 /* EditorCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditorCollectionViewCell.swift; sourceTree = "<group>"; };
 		AAF26FE21DFFDE4300C4FF26 /* PuzzleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PuzzleViewController.swift; sourceTree = "<group>"; };
@@ -293,6 +295,7 @@
 			isa = PBXGroup;
 			children = (
 				AAF26FDE1DFF962500C4FF26 /* CollectionViewController.swift */,
+				AAF122BF1E6EACEC00E2F756 /* EditorFlowLayout.swift */,
 				AAF26FE01DFF963F00C4FF26 /* EditorCollectionViewCell.swift */,
 			);
 			path = Editor;
@@ -464,6 +467,7 @@
 				AA6681A41DBDF9C700D496E9 /* NextViewController.swift in Sources */,
 				AA1181CE1DFBA18F000EF87D /* DashLineBrush.swift in Sources */,
 				AA6E64311DC74E8800137DD8 /* DDPopManager.swift in Sources */,
+				AAF122C01E6EACEC00E2F756 /* EditorFlowLayout.swift in Sources */,
 				AAF26FDF1DFF962500C4FF26 /* CollectionViewController.swift in Sources */,
 				AA1181CA1DFB9DEB000EF87D /* PencilBrush.swift in Sources */,
 				AA1181DF1DFE9926000EF87D /* ActionSheet.swift in Sources */,

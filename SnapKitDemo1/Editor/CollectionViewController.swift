@@ -10,10 +10,10 @@ import UIKit
 
 class CollectionViewController: UIViewController {
     fileprivate var collectionView: UICollectionView = {
-        let flow = UICollectionViewFlowLayout()
+        let flow = EditorFlowLayout()
         flow.minimumLineSpacing = 10
         flow.minimumInteritemSpacing = 10
-        flow.itemSize = CGSize(width: 60, height: 60)
+        flow.itemSize = CGSize(width: 100, height: 100)
         let collection = UICollectionView.init(frame: .zero, collectionViewLayout: flow)
         collection.backgroundColor = .white
         return collection
