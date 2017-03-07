@@ -20,7 +20,6 @@ class EditorFlowLayout: UICollectionViewFlowLayout {
             let delta: CGFloat = abs(attribute.center.x - centerX)
             let scale: CGFloat = 1.0 - delta / self.collectionView!.frame.width
             attribute.transform = CGAffineTransform.init(scaleX: scale, y: scale)
-            attribute.frame.origin.y = attribute.frame.origin.y * scale;
         }
         return attributes
     }
@@ -29,7 +28,21 @@ class EditorFlowLayout: UICollectionViewFlowLayout {
         return true
     }
     
-//    override func targetContentOffset(forProposedContentOffset proposedContentOffset: CGPoint, withScrollingVelocity velocity: CGPoint) -> CGPoint {
-//        return CGPoint(x:0, y: 100)
-//    }
+    override func targetContentOffset(forProposedContentOffset proposedContentOffset: CGPoint, withScrollingVelocity velocity: CGPoint) -> CGPoint {
+        var point = proposedContentOffset
+        var rect = CGRect.zero
+        rect.origin.y = 0
+        rect.origin.x = proposedContentOffset.x
+        rect.size = self.collectionView!.frame.size
+        let array = super.layoutAttributesForElements(in: rect)
+        let centerX = proposedContentOffset.x + self.collectionView!.frame.origin.x
+        var minDelta: CGFloat = CGFloat(MAXFLOAT)
+        for attribute in array! {
+            if abs(minDelta) > abs((attribute.center.x - centerX)) {
+                minDelta = attribute.center.x
+            }
+        }
+        point.x = point.x + minDelta
+        return point
+    }
 }
