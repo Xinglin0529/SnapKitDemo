@@ -39,7 +39,7 @@ class EditorFlowLayout: UICollectionViewFlowLayout {
         var minDelta: CGFloat = CGFloat(MAXFLOAT)
         for attribute in array! {
             if abs(minDelta) > abs((attribute.center.x - centerX)) {
-                minDelta = attribute.center.x
+                minDelta = attribute.center.x - centerX
             }
         }
         point.x = point.x + minDelta
