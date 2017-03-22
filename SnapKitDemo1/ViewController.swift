@@ -37,6 +37,7 @@ class ViewController: UIViewController {
         let editorItem = PushItem.init(className: "CollectionViewController", title: "EditorView")
         let sessionItem = PushItem.init(className: "URLSessionViewController", title: "URLSession")
         let sqliteItem = PushItem.init(className: "SqliteViewController", title: "Sqlite")
+        let jdItem = PushItem.init(className: "JDViewController", title: "JDAnimation")
         dataList = [
             swipeItem,
             personalItem,
@@ -45,7 +46,8 @@ class ViewController: UIViewController {
             puzzleItem,
             editorItem,
             sessionItem,
-            sqliteItem
+            sqliteItem,
+            jdItem
         ]
         
         self.view.addSubview(tableView)

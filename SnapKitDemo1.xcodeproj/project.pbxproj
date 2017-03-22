@@ -61,6 +61,9 @@
 		AAF26FF61DFFDF5E00C4FF26 /* image7.png in Resources */ = {isa = PBXBuildFile; fileRef = AAF26FED1DFFDF5E00C4FF26 /* image7.png */; };
 		AAF26FF71DFFDF5E00C4FF26 /* image8.png in Resources */ = {isa = PBXBuildFile; fileRef = AAF26FEE1DFFDF5E00C4FF26 /* image8.png */; };
 		AAF26FF81DFFDF5E00C4FF26 /* image9.png in Resources */ = {isa = PBXBuildFile; fileRef = AAF26FEF1DFFDF5E00C4FF26 /* image9.png */; };
+		ECF5DD051E825DE9003C86D7 /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ECF5DD041E825DE9003C86D7 /* 1.jpg */; };
+		ECF5DD0C1E825F9A003C86D7 /* JDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF5DD0B1E825F9A003C86D7 /* JDViewController.swift */; };
+		ECF5DD0E1E826647003C86D7 /* LineChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF5DD0D1E826647003C86D7 /* LineChartView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -134,6 +137,9 @@
 		AAF26FED1DFFDF5E00C4FF26 /* image7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image7.png; sourceTree = "<group>"; };
 		AAF26FEE1DFFDF5E00C4FF26 /* image8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image8.png; sourceTree = "<group>"; };
 		AAF26FEF1DFFDF5E00C4FF26 /* image9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image9.png; sourceTree = "<group>"; };
+		ECF5DD041E825DE9003C86D7 /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
+		ECF5DD0B1E825F9A003C86D7 /* JDViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JDViewController.swift; sourceTree = "<group>"; };
+		ECF5DD0D1E826647003C86D7 /* LineChartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineChartView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -250,6 +256,8 @@
 		AA6681901DBDEE9300D496E9 /* SnapKitDemo1 */ = {
 			isa = PBXGroup;
 			children = (
+				ECF5DD0A1E825F74003C86D7 /* JDViewController */,
+				ECF5DD041E825DE9003C86D7 /* 1.jpg */,
 				AA0E24481E0B693900CFA947 /* Sqlite */,
 				AA0E24451E0A339300CFA947 /* PresentationViewController */,
 				AA5020A61E03E1C700AF8409 /* URLSession */,
@@ -317,6 +325,15 @@
 			path = sources;
 			sourceTree = "<group>";
 		};
+		ECF5DD0A1E825F74003C86D7 /* JDViewController */ = {
+			isa = PBXGroup;
+			children = (
+				ECF5DD0B1E825F9A003C86D7 /* JDViewController.swift */,
+				ECF5DD0D1E826647003C86D7 /* LineChartView.swift */,
+			);
+			path = JDViewController;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -382,6 +399,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA66819C1DBDEE9300D496E9 /* LaunchScreen.storyboard in Resources */,
+				ECF5DD051E825DE9003C86D7 /* 1.jpg in Resources */,
 				AAF26FF81DFFDF5E00C4FF26 /* image9.png in Resources */,
 				AAF26FF61DFFDF5E00C4FF26 /* image7.png in Resources */,
 				AAF26FF51DFFDF5E00C4FF26 /* image6.png in Resources */,
@@ -457,10 +475,12 @@
 				AA1181851DF90359000EF87D /* ScaleAvatar.swift in Sources */,
 				AA0E244E1E0B6FE800CFA947 /* SqliteManager.swift in Sources */,
 				AA6E642D1DC71B5D00137DD8 /* DDPopWindow.swift in Sources */,
+				ECF5DD0C1E825F9A003C86D7 /* JDViewController.swift in Sources */,
 				AA1181C11DFAA296000EF87D /* CustomPrefix.swift in Sources */,
 				AA11817D1DF6AC96000EF87D /* SwipeCell.swift in Sources */,
 				AAF26FE11DFF963F00C4FF26 /* EditorCollectionViewCell.swift in Sources */,
 				AAF26FE51DFFDE6700C4FF26 /* PuzzleView.swift in Sources */,
+				ECF5DD0E1E826647003C86D7 /* LineChartView.swift in Sources */,
 				AA0E24471E0A33A900CFA947 /* PresentationController.swift in Sources */,
 				AA1181C61DFB9643000EF87D /* BaseBrush.swift in Sources */,
 				AA11817B1DF696B1000EF87D /* SwipeView.swift in Sources */,
